@@ -111,16 +111,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th><img height='250px' src="{{ asset('storage/angie.JPEG')}}" alt="Angie"></th>
+                            <th><img height='250px' src="/images/Angi.jpeg" alt="Angie"></th>
                             <th>María de los Angeles Contreras Anaya</th>
                             <th>A01700284</th>
                             <th>La única experiencia que he tenido con desarrollo web fue la que adquirí el semestre pasado en bloque 1, he trabajdo con javascript, html5, css3 y php. De librerías he ocupado jQuery, bootstrap y materialize. </th>
                         </tr>
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <th><img height='250px' src="/images/Karla.jpeg" alt="Karly"></th>
+                            <th>Karla Daniela Romero Pérez</th>
+                            <th>A01704384</th>
+                            <th>Mi experiencia con desarrollo web abarca desde bloque 1 con un proyecto para una asociación civíl, donde ocupamos tecnologías como JavaScript, HTML5, CSS3, PHP y MySQL, Bootstrap, Materialize o JQuery. Además tengo un poco de experiencia con Django ya que lo usé para un proyecto en el negocio familiar.</th>
                         </tr>
                         <tr>
                         <th></th>
