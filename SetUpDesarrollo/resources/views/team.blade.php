@@ -123,10 +123,10 @@
                             <th>Mi experiencia con desarrollo web abarca desde bloque 1 con un proyecto para una asociación civíl, donde ocupamos tecnologías como JavaScript, HTML5, CSS3, PHP y MySQL, Bootstrap, Materialize o JQuery. Además tengo un poco de experiencia con Django ya que lo usé para un proyecto en el negocio familiar.</th>
                         </tr>
                         <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th><img height='250px' src="/images/Mariana.jpeg" alt="Mariana"></th>
+                            <th>Mariana Favarony Ávila</th>
+                            <th>A01704671</th>
+                            <th>En cuanto al desarrollo web la única experiencia que he adquirido ha sido en el proyecto de bloque 1 el semestre pasado. He trabajado con html5, javascript,css3 y php. He utilizado las siguientes librerias:  jQuery, bootstrap y materialize.</th>
                         </tr>
                     </tbody>
                 </table>
