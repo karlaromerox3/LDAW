@@ -1,0 +1,25 @@
+.App {
+  background-color: black;
+  height: auto;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 15vmin;
+  /*padding-right: 20%;*/
+}
+
+.App-header {
+  padding: 10px;
+}
+.title{
+  font-size: 12vh;
+};
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
