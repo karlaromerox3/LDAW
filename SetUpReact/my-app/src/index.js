@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header1 from './components/Header1';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
+import Search from './components/Search';
+import CardNR from './components/CardNR';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Header1 />,
   document.getElementById('root')
+);
+ReactDOM.render(
+  <Search />,
+document.getElementById('root1')
+);
+ReactDOM.render(
+  <CardNR />,
+document.getElementById('root2')
 );
 
 // If you want your app to work offline and load faster, you can change
