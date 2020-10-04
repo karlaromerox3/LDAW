@@ -16,6 +16,7 @@ class Dropdown extends React.Component {
   }
 
   //AQUI DEBEMOS LLAMAR AL API
+  //documentación JIC: https://scriptverse.academy/tutorials/reactjs-select.html
   componentDidMount() {
     this.setState({
       options: [
