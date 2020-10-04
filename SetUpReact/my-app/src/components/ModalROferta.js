@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import '../styles/modals.css'
 import { Button, Modal } from 'react-bootstrap';
+import Dropdown from './Dropdown';
 
 class ModalOferta extends React.Component {
   constructor() {
@@ -20,13 +21,15 @@ class ModalOferta extends React.Component {
     return (
       <React.StrictMode>
         <button className="btn btn-outline-primary" onClick={() => { this.handleModal() }}>Registrar Oferta</button>
-        <Modal className="modalOferta" show={this.state.show} onHide={() => this.handleModal()} >
-          <Modal.Header closeButton>
-            <h6 className="modal-title">Registrar Oferta</h6>
-          </Modal.Header>
+        <Modal className="modalOferta" show={this.state.show} onHide={() => this.handleModal()} centered>
+         
           <Modal.Body>
+          <center><h1>Registrar Oferta</h1></center> <br/>
             <form>
               {/*Aqui va el componente del dropdown*/}
+              <Dropdown 
+              titulo = 'Selecciona el juego a intercambiar'
+               />
               <div class="form-group">
                 <label class="modal-text" for="nombreCompleto">Nombre Completo</label>
                 <input type="text" class="form-control" id="nombreCompleto" placeholder="María Sandoval Arrieta" />

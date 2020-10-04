@@ -5,7 +5,6 @@ import App from './App';
 import ModalROferta from './components/ModalROferta';
 import ModalMisOfertas from './components/ModalMisOfertas';
 import ModalVerDatos from './components/ModalVerDatos';
-import Dropdown from './components/Dropdown';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
@@ -15,14 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <ModalROferta/>
-    {/*<Dropdown  
-      items = {[
-        {value: 'United States', id: 1},
-        {value: 'Mexico', id: 2},
-        {value: 'Canada', id: 3},
-        {value: 'Alaska', id: 4}
-      ]}
-    />*/}
+    
     <ModalMisOfertas 
       tituloQ = 'Fall Guys'
       dueñoQ = 'Valeria Guerra de la O'

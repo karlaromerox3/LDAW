@@ -8,34 +8,44 @@ import '../styles/dropdown.css';
 
 class Dropdown extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      options: {}
+      options: []
     }
   }
 
+  //AQUI DEBEMOS LLAMAR AL API
   componentDidMount() {
     this.setState({
-      options: this.props.items
+      options: [
+        { id: '1', name: 'Prueba 1' },
+        { id: '2', name: 'Prueba 2' },
+        { id: '3', name: 'Prueba 3' }
+      ]
     });
   }
 
-  render(){
+  render() {
     const { options } = this.state;
 
-    let optionsList = Object.keys(options).map((k) => {
-      return (
-        <option key={k} value={k}>{options[k]}</option>
-      )
-    }, this);
-  
+    let optionsList = options.length > 0
+      && options.map((item, i) => {
+        return (
+          <option key={i} value={item.id}>{item.name}</option>
+        )
+      }, this);
+
     return (
-      <div>
-        <select>
+      <React.StrictMode>
+        <div class="form-group">
+        <label for="select">{this.props.titulo}</label> <br/>
+        <select className="browser-default custom-select" id="select">
           {optionsList}
         </select>
-      </div>
+        </div>
+        
+      </React.StrictMode>
     );
   }
 
