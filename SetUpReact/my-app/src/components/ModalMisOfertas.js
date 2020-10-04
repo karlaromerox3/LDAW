@@ -16,7 +16,7 @@ import { Button, Modal } from 'react-bootstrap';
              O para el juego que ofrezco
 */
 
-class ModalOferta extends React.Component {
+class ModalMisOfertas extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -105,4 +105,4 @@ class ModalOferta extends React.Component {
   }
 }
 
-export default ModalOferta;
+export default ModalMisOfertas;

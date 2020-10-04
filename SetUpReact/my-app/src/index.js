@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import ModalROferta from './components/ModalROferta';
 import ModalMisOfertas from './components/ModalMisOfertas';
+import ModalVerDatos from './components/ModalVerDatos';
 import Dropdown from './components/Dropdown';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -37,6 +38,12 @@ ReactDOM.render(
       consolaO = 'Switch'
       condicionesO = 'Este juego lo compre en el año... y se encuentra en buenas condiciones...'
       
+    />
+
+    <ModalVerDatos 
+      nombre = 'Mariana Favarony'
+      cel = '4423567462'
+      correo = 'ejemplo@gmail.com'
     />
   </React.StrictMode>,
   document.getElementById('root')

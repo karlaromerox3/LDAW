@@ -13,12 +13,6 @@
   
 }
 
-.vl {
-  border-left: 6px solid whit;
-  height: 50px;
-  width: 10px;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 0;
+.bigger-text{
+  font-size: 2vw !important;
 }
