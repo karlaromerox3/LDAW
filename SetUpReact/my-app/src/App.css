@@ -23,3 +23,9 @@
     transform: rotate(360deg);
   }
 }
+
+.modalOferta .modal-content {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}

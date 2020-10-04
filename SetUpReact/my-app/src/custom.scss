@@ -10,7 +10,20 @@ $theme-colors: (
 
 $body-bg: #000;
 
+.badge{
+    background-color: #b8cbe2;
+    color: #000000;
+  }
+
+
+
 h1{
+    color: white;
+    text-align: center;
+    font-family: 'Allerta Stencil', sans-serif;
+};
+
+h6{
     color: white;
     text-align: center;
     font-family: 'Allerta Stencil', sans-serif;
@@ -21,7 +34,18 @@ h2{
     font-family: 'Sulphur Point', sans-serif;
 };
 
+h3{
+    color: black;
+    font-family: 'Sulphur Point', sans-serif;
+};
+
 p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+};
+
+
+label{
     color: white;
     font-family: 'Montserrat', sans-serif;
 };
