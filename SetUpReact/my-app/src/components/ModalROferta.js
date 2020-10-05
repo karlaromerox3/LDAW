@@ -24,7 +24,7 @@ class ModalOferta extends React.Component {
         <Modal className="modalOferta" show={this.state.show} onHide={() => this.handleModal()} centered>
          
           <Modal.Body>
-          <center><h3 className="titulo-modal">Registrar Oferta</h3></center> <br/>
+          <center><h3>Registrar Oferta</h3></center> <br/>
             <form>
               {/*Aqui va el componente del dropdown*/}
               <Dropdown 

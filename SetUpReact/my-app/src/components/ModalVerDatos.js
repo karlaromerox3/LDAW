@@ -34,7 +34,7 @@ class ModalVerDatos extends React.Component {
           <Modal.Body>
             <div class="row">
               <div class="col-12">
-                <center><h3 className="titulo-modal">Datos de contacto</h3></center> <br/>
+                <center><h3>Datos de contacto</h3></center> <br/>
                 <p><strong>Nombre completo: </strong>
                 <p class="bigger-text">{this.props.nombre}</p></p>
                 <p>
