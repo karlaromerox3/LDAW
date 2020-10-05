@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header1 from './components/Header1';
 import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
+
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,7 +14,7 @@ ReactDOM.render(
    
 
   </React.StrictMode>,
+    
   document.getElementById('root')
 );
-
 
