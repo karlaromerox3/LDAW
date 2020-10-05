@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
-import logo from './resources/logowobg.png';
+import React from 'react';
 
-class App extends Component{
-  render() {
+export default function App() {
     return (
+<<<<<<< HEAD
       <React.StrictMode>
         <div className="App-header">
           <nav class="navbar navbar-inverse">
@@ -20,10 +18,9 @@ class App extends Component{
           </nav>
         </div>
       </React.StrictMode>
+=======
+      <div></div>
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
     )
-  }
 }
-
-export default App;
-
 

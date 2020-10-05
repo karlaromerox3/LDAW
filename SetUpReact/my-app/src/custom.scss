@@ -1,14 +1,28 @@
-/* make the customizations */
+/* make the customizations of bootstrap*/
+
+// COLORS
 $theme-colors: (
     "danger": #FF6B83,
     "success": #81FFC8,
     "primary": #649CFC,
     "secondary": #DCE6F2,
-    "dark": black,
+    "dark": #000000,
     "light": #DCE6F2,
 );
 
-$body-bg: #000;
+// BODY
+
+$body-bg: black;
+
+// TITLES & SUBTITLES
+$font-size-base: .875rem !default;
+
+$h1-font-size: 6rem;
+$h2-font-size: 6rem;
+$h3-font-size: 4rem;
+$h4-font-size: 3rem;
+$h5-font-size: 2rem;
+$h6-font-size: 1rem;
 
 .badge{
     background-color: #b8cbe2;
@@ -23,6 +37,7 @@ h1{
     font-family: 'Allerta Stencil', sans-serif;
 };
 
+<<<<<<< HEAD
 h6{
     color: white;
     text-align: center;
@@ -30,25 +45,200 @@ h6{
 };
 
 h2{
+=======
+h2,h3,h4,h5{
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
     color: white;
+    text-align: center;
     font-family: 'Sulphur Point', sans-serif;
 };
 
+<<<<<<< HEAD
 h3{
     color: black;
     font-family: 'Sulphur Point', sans-serif;
 };
 
 p{
+=======
+// TEXT
+
+p, h6{
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
     color: white;
     font-family: 'Montserrat', sans-serif;
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
 label{
     color: white;
     font-family: 'Montserrat', sans-serif;
 };
 
+<<<<<<< HEAD
+=======
+.gameName{
+    font-size: 1.5rem;
+}
+
+// Tables
+.thead-light {
+    th {
+      color: $table-head-color;
+      background-color: $table-head-bg;
+      border-color: $table-border-color;
+    }
+}
+
+$table-head-color: black;
+$table-head-bg: #DCE6F2;
+$table-border-color: #F0F4F9;
+
+$table-accent-bg:               rgba($white,.05) !default;
+$table-dark-hover-bg:           #F0F4F9;
+$table-dark-hover-color:        black;
+
+$table-dark-bg:               black;
+$table-dark-border-color:      #DCE6F2;
+
+// Tooltips
+
+$tooltip-bg:                  $gray-700 !default;
+$tooltip-opacity:             1 !default;
+
+// Buttons
+
+$input-btn-padding-x:       1rem !default;
+
+.btn-primary {
+      color: white !important;
+      font-family: 'Montserrat', sans-serif;
+}
+
+button:hover{
+    color: white !important;
+    //background-color: #649CFC!important;
+}
+
+// Forms
+
+$input-disabled-bg:              $gray-400 !default;
+
+$input-border-color:             $white !default;
+
+$input-group-addon-color:           $white !default;
+$input-group-addon-bg:              #DCE6F2;
+$input-group-addon-border-color:    transparent !default;
+
+$custom-file-color:                 $white !default;
+$custom-file-border-color:          $gray-700 !default;
+
+input::placeholder {
+    color: rgb(209, 209, 209) !important;
+    opacity: 1;
+}
+
+// Dropdowns
+
+$dropdown-bg:                    $gray-700 !default;
+$dropdown-divider-bg:            $gray-800 !default;
+
+$dropdown-link-color:            $white !default;
+$dropdown-link-hover-color:      $white !default;
+$dropdown-link-hover-bg:         $primary !default;
+
+// Navs
+
+$nav-tabs-border-color:                       $table-border-color !default;
+$nav-tabs-link-hover-border-color:            $nav-tabs-border-color !default;
+$nav-tabs-link-active-color:                  $white !default;
+$nav-tabs-link-active-bg:                     $nav-tabs-border-color !default;
+$nav-tabs-link-active-border-color:           $nav-tabs-border-color !default;
+
+// Navbar
+
+$navbar-dark-hover-color:           $white !default;
+
+// Pagination
+
+$pagination-color:                     $white !default;
+$pagination-bg:                        $gray-700 !default;
+$pagination-border-color:              transparent !default;
+
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $primary !default;
+$pagination-hover-border-color:        $pagination-border-color !default;
+
+$pagination-disabled-bg:               $pagination-bg !default;
+$pagination-disabled-border-color:     $pagination-border-color !default;
+
+
+// Jumbotron
+
+$jumbotron-bg:                   $gray-700 !default;
+
+// Cards
+
+$card-bg:                  $gray-700 !default;
+
+// Popovers
+
+$popover-bg:                          $gray-700 !default;
+
+// Toasts
+
+$toast-color:                       $white !default;
+$toast-background-color:            $gray-800 !default;
+$toast-border-color:                $gray-700 !default;
+
+$toast-header-color:                $body-color !default;
+$toast-header-background-color:     $toast-background-color !default;
+$toast-header-border-color:         $toast-border-color !default;
+
+// Modals
+
+$modal-content-bg:   black;
+
+$modal-border-color:   white;
+
+.modal-content{
+    border: white 2px solid !important;
+}
+
+// Progress bars
+
+$progress-bg:                   $gray-700 !default;
+
+// List group
+
+$list-group-bg:                  $gray-800 !default;
+$list-group-border-color:        $gray-700 !default;
+
+$list-group-hover-bg:                 $primary !default;
+
+$list-group-disabled-bg:         $gray-700 !default;
+
+$list-group-action-active-bg:         $primary !default;
+
+ul {
+    list-style-type: none;
+  }
+// Breadcrumbs
+
+$breadcrumb-bg:                 $gray-700 !default;
+
+// Close
+
+$close-color:                 $white !default;
+$close-text-shadow:           none !default;
+
+// Code
+
+$pre-color:                         inherit !default;
+
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

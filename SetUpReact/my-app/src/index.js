@@ -1,16 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header1 from './components/Header1';
 import './index.css';
+<<<<<<< HEAD
 import App from './App';
 import ModalROferta from './components/ModalROferta';
 import ModalMisOfertas from './components/ModalMisOfertas';
 import ModalVerDatos from './components/ModalVerDatos';
+=======
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
+import Search from './components/Search';
+import CardNR from './components/CardNR';
 
 
 ReactDOM.render(
+<<<<<<< HEAD
   <React.StrictMode>
     <App />
     <ModalROferta/>
@@ -38,7 +45,18 @@ ReactDOM.render(
       correo = 'ejemplo@gmail.com'
     />
   </React.StrictMode>,
+=======
+    <Header1 />,
+>>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
   document.getElementById('root')
+);
+ReactDOM.render(
+  <Search />,
+document.getElementById('root1')
+);
+ReactDOM.render(
+  <CardNR />,
+document.getElementById('root2')
 );
 
 // If you want your app to work offline and load faster, you can change
