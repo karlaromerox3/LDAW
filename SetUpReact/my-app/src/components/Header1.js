@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import './../App.css';
-import logo from './../resources/logowobg.png';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import logo from '../resources/logowobg.png';
+
+
+
 
 class Header1 extends Component{
   
@@ -28,4 +31,5 @@ class Header1 extends Component{
 }
 
 export default Header1;
+
 
