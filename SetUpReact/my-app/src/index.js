@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Header3 from './components/Header3';
+import ModalRegistrarse from './components/ModalRegistrarse';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
@@ -10,7 +10,7 @@ import './App.scss';
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-   <Header3 />
+   <ModalRegistrarse />
 
   </React.StrictMode>,
   document.getElementById('root')

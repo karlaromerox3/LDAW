@@ -11,28 +11,18 @@ class Header3 extends Component{
         <div className="App-header">
         <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-  <ul class="nav navbar-nav navbar-left">
-      <li>
       <img src={logo} className="App-logo" alt="GAMECH logo" />
-      
-        <div>
-        <br />
         
-        </div>
-        </li>
-      
-    </ul>
     
 
     <ul class="nav navbar-nav navbar-center">
       <li>    <h1 className="title">SMASH BROS</h1></li>
       <li>        <div class="toptext"> <p >Edición: Ultimate </p>&nbsp;&nbsp;&nbsp; <p align="left">Versión: 4.5</p></div>
-</li>
+    </li>
 
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
-      <li>
+    
        
         <Dropdown>
   <Dropdown.Toggle  id="dropdown-basic">
@@ -43,8 +33,7 @@ class Header3 extends Component{
     <Dropdown.Item href="#/action-1">Cerrar Sesión</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
-</li>
-    </ul>
+
   </div>
 </nav>
 
