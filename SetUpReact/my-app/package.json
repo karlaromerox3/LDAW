@@ -18,14 +18,10 @@
     "react-data-table-component": "^6.11.5",
     "react-data-table-component-extensions": "^1.4.1",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-    "react-scripts": "3.4.3",
-    "react-select": "^3.1.0"
-=======
+
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "styled-components": "^5.2.0"
->>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
   },
   "scripts": {
     "start": "react-scripts start",
