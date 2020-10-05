@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import Header1 from './components/Header1';
 import './index.css';
 import App from './App';
+<<<<<<< HEAD
 import ModalROferta from './components/ModalROferta';
 import ModalMisOfertas from './components/ModalMisOfertas';
 import ModalVerDatos from './components/ModalVerDatos';
 import * as serviceWorker from './serviceWorker';
+=======
+>>>>>>> Mariana/Componentes
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'; 
 import Search from './components/Search';
@@ -16,6 +19,7 @@ import CardNR from './components/CardNR';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+<<<<<<< HEAD
     <Header1 />
     <ModalROferta/>
     
@@ -41,11 +45,16 @@ ReactDOM.render(
       cel = '4423567462'
       correo = 'ejemplo@gmail.com'
     />
+=======
+   
+
+>>>>>>> Mariana/Componentes
   </React.StrictMode>,
     
   document.getElementById('root')
 );
 
+<<<<<<< HEAD
 ReactDOM.render(
   <Search />,
 document.getElementById('root1')
@@ -59,3 +68,6 @@ document.getElementById('root2')
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+=======
+
+>>>>>>> Mariana/Componentes

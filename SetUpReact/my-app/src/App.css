@@ -8,11 +8,43 @@
   width: 18vh;
   /*padding-right: 20%;*/
 }
+.Google-logo {
+  height: 30px;
+  width:30px;
 
+  /*padding-right: 20%;*/
+}
 .App-header {
   padding: 10px;
 }
+<<<<<<< HEAD
 
+=======
+.center{
+  width:50%;
+  height:50%;
+
+}
+.toptext {
+  display: flex;
+  align-items: center;
+}
+.modalIS{
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+
+}
+ul {
+  justify-content: center;
+  display: flex;
+}
+
+
+.title{
+  font-size: 12vh;
+};
+>>>>>>> Mariana/Componentes
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

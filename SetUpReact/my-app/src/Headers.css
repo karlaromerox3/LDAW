@@ -1,0 +1,12 @@
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
+.center {
+    width:800px;
+  }
+.right{
+    padding-right: 20%;
+}
+
+
