@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
 import './../App.css';
+import logoGoogle from './../resources/google.png';
 
 class ModalIniciaSesion extends React.Component {
   constructor() {
@@ -44,14 +45,18 @@ class ModalIniciaSesion extends React.Component {
   
   <ul>
 
-  <li><Button variant="primary" type="submit">
-    Iniciar Sesión
-  </Button></li>
-        <li> &nbsp; <p>ó</p></li>
- 
-<li> <Button variant="primary" type="submit">
-    Iniciar Sesión con google
-  </Button></li>
+  <Button variant="primary" type="submit">
+    Registrarse
+  </Button>
+  </ul>
+  <ul>
+      <p>ó</p>
+      </ul>
+      <ul>
+      <img  src={logoGoogle} className="Google-logo" alt="" />&nbsp;
+<Button variant="primary" type="submit">
+    Registrarse con Google
+  </Button>
   
   </ul>
   

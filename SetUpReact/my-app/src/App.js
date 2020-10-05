@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import './App.css';
-import logo from './resources/logowobg.png';
+import Header1 from './components/Header1';
+import Header2 from './components/Header2';
 
+import logo from './resources/logowobg.png';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 class App extends Component{
+  
   
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-        <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <img src={logo} className="App-logo" alt="GAMECH logo" />
-    <h1 className="title">GAMECH</h1>
-    <ul class="nav navbar-nav navbar-right">
-      <li>
-        <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#registrarse">Registrarse</button>
-        &nbsp;
-        <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#iniciarSesion">Iniciar sesión</button></li>
-
-    </ul>
-  </div>
-</nav>
-        </div>
+      <Router>
+      <div className="Container">
+       <Switch>
+         <Route path="/" exact>
+         <Header1 />
+         </Route>
+         <Route path="/registrado" exact>
+         <Header2 />
+         </Route>
+       </Switch>
       </div>
+      </Router>
     )
   }
 }

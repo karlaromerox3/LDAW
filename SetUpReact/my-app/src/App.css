@@ -8,12 +8,19 @@
   height: 15vmin;
   /*padding-right: 20%;*/
 }
+.Google-logo {
+  height: 30px;
+  width:30px;
 
+  /*padding-right: 20%;*/
+}
 .App-header {
   padding: 10px;
 }
 .center{
   width:50%;
+  height:50%;
+
 }
 .toptext {
   display: flex;
@@ -24,6 +31,10 @@
   color: #ffffff;
   border-color: #ffffff;
 
+}
+ul {
+  justify-content: center;
+  display: flex;
 }
 
 

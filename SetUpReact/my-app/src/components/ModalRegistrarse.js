@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
+import logoGoogle from './../resources/google.png';
+
 import './../App.css';
 
 class ModalRegistrarse extends React.Component {
@@ -27,8 +29,8 @@ class ModalRegistrarse extends React.Component {
         <div class="modalIS">
 
         <Modal.Header closeButton>
-          <div className="center">  <Modal.Title><img allign="center" src={logo} className="App-logo" alt="GAMECH logo" /></Modal.Title>
-          </div>
+           <Modal.Title ><img  src={logo} className="App-logo" alt="GAMECH logo" /></Modal.Title>
+          
         </Modal.Header>
         <Modal.Body>
         <Form>
@@ -49,14 +51,18 @@ class ModalRegistrarse extends React.Component {
   
   <ul>
 
-  <li><Button variant="primary" type="submit">
+  <Button variant="primary" type="submit">
     Registrarse
-  </Button></li>
-        <li> &nbsp; <p>ó</p></li>
- 
-<li> <Button variant="primary" type="submit">
+  </Button>
+  </ul>
+  <ul>
+      <p>ó</p>
+      </ul>
+      <ul>
+      <img  src={logoGoogle} className="Google-logo" alt="" />&nbsp;
+<Button variant="primary" type="submit">
     Registrarse con Google
-  </Button></li>
+  </Button>
   
   </ul>
   
