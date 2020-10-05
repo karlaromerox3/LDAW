@@ -1,5 +1,4 @@
 import React from 'react';
-import Select from 'react-select';
 import '../App.css';
 import '../styles/modals.css';
 import '../styles/dropdown.css';

@@ -40,11 +40,11 @@ class ModalMisOfertas extends React.Component {
           <Modal.Body>
             <div class="row">
               <div class="col-6 border-right">
-                <center><h2><span class="badge texto">Juego que quiero</span></h2>
+                <center><h4><span class="badge texto">Juego que quiero</span></h4>
                 <strong>
-                  <h2>
+                  <h4>
                    {this.props.tituloQ}
-                  </h2>
+                  </h4>
                 </strong>
                 </center>
                 <p>
@@ -69,11 +69,11 @@ class ModalMisOfertas extends React.Component {
                 </p>
               </div>
               <div class="col-6">
-                <center><h2><span class="badge texto">Juego que ofrezco</span></h2>
+                <center><h4><span class="badge texto">Juego que ofrezco</span></h4>
                 <strong>
-                  <h2>
+                  <h4>
                    {this.props.tituloO}
-                  </h2>
+                  </h4>
                 </strong>
                 </center>
                 <p>

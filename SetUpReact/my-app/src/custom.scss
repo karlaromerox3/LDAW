@@ -37,49 +37,35 @@ h1{
     font-family: 'Allerta Stencil', sans-serif;
 };
 
-<<<<<<< HEAD
 h6{
     color: white;
     text-align: center;
     font-family: 'Allerta Stencil', sans-serif;
 };
 
-h2{
-=======
+
 h2,h3,h4,h5{
->>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
     color: white;
     text-align: center;
     font-family: 'Sulphur Point', sans-serif;
 };
 
-<<<<<<< HEAD
-h3{
-    color: black;
-    font-family: 'Sulphur Point', sans-serif;
-};
 
-p{
-=======
+
+
 // TEXT
 
 p, h6{
->>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
     color: white;
     font-family: 'Montserrat', sans-serif;
 };
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
 label{
     color: white;
     font-family: 'Montserrat', sans-serif;
 };
 
-<<<<<<< HEAD
-=======
 .gameName{
     font-size: 1.5rem;
 }
@@ -239,6 +225,5 @@ $close-text-shadow:           none !default;
 
 $pre-color:                         inherit !default;
 
->>>>>>> a0f2cdf9ba5b7e525d6f9797581092cc422bcea8
 /* import bootstrap to set changes */
-@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap"
