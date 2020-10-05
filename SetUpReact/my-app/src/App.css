@@ -12,6 +12,14 @@
 .App-header {
   padding: 10px;
 }
+.center{
+  width:50%;
+}
+.toptext {
+  display: flex;
+  align-items: center;
+}
+
 .title{
   font-size: 12vh;
 };

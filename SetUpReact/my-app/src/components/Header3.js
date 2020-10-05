@@ -3,7 +3,7 @@ import { Dropdown, Form, Button,FormControl} from 'react-bootstrap';
 import './../App.css';
 import logo from './../resources/logowobg.png';
 
-class Header2 extends Component{
+class Header3 extends Component{
   
   render() {
     return (
@@ -14,8 +14,7 @@ class Header2 extends Component{
   <ul class="nav navbar-nav navbar-left">
       <li>
       <img src={logo} className="App-logo" alt="GAMECH logo" />
-      &nbsp;&nbsp;&nbsp;
-        <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</button>
+      
         <div>
         <br />
         
@@ -26,18 +25,10 @@ class Header2 extends Component{
     
 
     <ul class="nav navbar-nav navbar-center">
-      <li>    <h1 className="title">GAMECH</h1>
+      <li>    <h1 className="title">SMASH BROS</h1></li>
+      <li>        <div class="toptext"> <p >Edición: Ultimate </p>&nbsp;&nbsp;&nbsp; <p align="left">Versión: 4.5</p></div>
 </li>
-<br />
 
-<li>
-    <div >
-        <Form inline >
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button >Search</Button>
-    </Form>
-    </div>
-    </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
@@ -53,22 +44,22 @@ class Header2 extends Component{
   </Dropdown.Menu>
 </Dropdown>
 </li>
-<br />
-
-<li> <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#misOfertas">Mis Juegos</button>
-&nbsp;&nbsp;&nbsp;
-<button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#nuevoTitulo">ADD</button>
-</li>
-
     </ul>
   </div>
 </nav>
+
+
+
+
+
         </div>
       </div>
+
+   
     )
   }
 }
 
-export default Header2;
+export default Header3;
 
 

@@ -3,6 +3,7 @@ import './App.css';
 import logo from './resources/logowobg.png';
 
 class App extends Component{
+  
   render() {
     return (
       <div className="App">
@@ -16,6 +17,7 @@ class App extends Component{
         <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#registrarse">Registrarse</button>
         &nbsp;
         <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#iniciarSesion">Iniciar sesión</button></li>
+
     </ul>
   </div>
 </nav>
@@ -25,5 +27,5 @@ class App extends Component{
   }
 }
 
-    
 export default App;
+
