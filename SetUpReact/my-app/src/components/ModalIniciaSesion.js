@@ -2,10 +2,9 @@
 import React, { Component } from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
-import './../App.css';
 import logoGoogle from './../resources/google.png';
 
-class ModalIniciaSesion extends React.Component {
+class ModalIniciaSesion extends Component {
   constructor() {
     super();
     this.state = {

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function App() {
-    return (
-      <div></div>
-=======
 import React, { Component } from 'react';
 import Header1 from './components/Header1';
 import Header2 from './components/Header2';
@@ -33,12 +26,9 @@ class App extends Component{
        </Switch>
       </div>
       </Router>
->>>>>>> Mariana/Componentes
     )
 }
 
-<<<<<<< HEAD
-=======
+}
 export default App;
 
->>>>>>> Mariana/Componentes

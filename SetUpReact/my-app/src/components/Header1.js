@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import logo from '../resources/logowobg.png';
+import ModalIniciaSesion from '../components/ModalIniciaSesion';
 
 
 class Header1 extends Component{
@@ -18,7 +19,7 @@ class Header1 extends Component{
         <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#registrarse">Registrarse</button>
         &nbsp;
         <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#iniciarSesion">Iniciar sesión</button></li>
-
+      <ModalIniciaSesion/>
     </ul>
   </div>
 </nav>
