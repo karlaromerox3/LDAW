@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header1 from './components/Header1';
 import Header2 from './components/Header2';
+import Header3 from './components/Header3';
 
 import logo from './resources/logowobg.png';
 import {
@@ -22,6 +23,9 @@ class App extends Component{
          </Route>
          <Route path="/registrado" exact>
          <Header2 />
+         </Route>
+         <Route path="/juego" exact>
+         <Header3 />
          </Route>
        </Switch>
       </div>
