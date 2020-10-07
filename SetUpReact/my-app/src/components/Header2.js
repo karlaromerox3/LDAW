@@ -3,14 +3,14 @@ import { Dropdown, Form, Button,FormControl} from 'react-bootstrap';
 import './../App.css';
 import logo from './../resources/logowobg.png';
 import Search from '../components/Search';
-import CardNR from '../components/CardNR';
+import CardR from '../components/CardR';
 
 class Header2 extends Component{
   
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        
         <nav class="navbar navbar-inverse">
           {/*<div className="position:right">
       <Dropdown>
@@ -33,7 +33,9 @@ class Header2 extends Component{
   <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</button>
 
               <h1 className="title">GAMECH</h1>
-              <ul class="nav navbar-nav navbar-right">
+              <div className="App-header">
+          <div fixed="top-right">
+          <ul class="nav navbar-nav navbar-right">
       <li>
       <Dropdown>
       <Dropdown.Toggle  id="dropdown-basic">
@@ -51,22 +53,23 @@ class Header2 extends Component{
 <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#nuevoTitulo">ADD</button>
 </li>
       </ul>
+          </div>
 <br />
 </div>
 
-
+</div>
 
 
 </nav>
 <Search/>
 
-    <CardNR />
+    <CardR />
 
   
 <br />
 
 </div>
-</div>
+
 
     )
   }
