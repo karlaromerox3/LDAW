@@ -22,6 +22,7 @@ class ModalIniciaSesion extends Component {
   render() {
     return (
       <React.StrictMode>
+
         <button className="btn btn-outline-primary" onClick={() => { this.handleModal() }}>Iniciar Sesión</button>
         <Modal className="modalIniciarSesion" show={this.state.show} onHide={() => this.handleModal()} centered>
         <div class="modalIS">
