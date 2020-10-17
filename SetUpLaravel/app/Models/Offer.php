@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Game extends Model
+class Offer extends Model
 {
     //assigning db table model is associated with
-    protected $table = 'games';
+    protected $table = 'offers';
 
     //fillable fields
-    protected $fillable = ['title_id, user_id, name, tel, cell, mail, console_id, condition'];
+    protected $fillable = ['userD_id, completeName, telephone, cellphone, mail, gameD_id, gameR_id, status'];
+
 }
