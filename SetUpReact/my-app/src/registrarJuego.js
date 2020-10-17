@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
 import TitleDrop from "./components/TitleDrop"
+import ConsoleDrop from "./components/ConsoleDrop"
 
 //Importing Icon library
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -56,6 +57,13 @@ export default function RegistrarJuego() {
             &nbsp;
             <label for="exampleInputEmail1">Correo:</label>
             <input type="mail" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mariaSandoval@gmail.com"></input>
+        </div>
+
+        <div className="form-group">
+            <FontAwesomeIcon icon={['fas', 'gamepad']} color="white"/>
+            &nbsp;
+            <label for="tituloJuego">Consola:</label>
+            <ConsoleDrop/>
         </div>
 
         <div className="form-group">

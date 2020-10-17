@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Console extends Model
 {
-    use HasFactory;
+    //assigning db table model is associated with
+    protected $table = 'consoles';
 }
