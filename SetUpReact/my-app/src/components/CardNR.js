@@ -1,38 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../card.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-export default function CardNR() {
+//API CALLS
+import axios from 'axios';
+import { API_BASE_URL } from '../index';
+
+
+export default class CardR extends Component {
+  state = {
+    titles: []
+  }
+
+  componentDidMount() {
+    const url = API_BASE_URL + 'titles/index';
+    axios.get(url).then(response => response.data)
+    .then((data) => {
+      this.setState({ titles: data })
+      console.log(this.state.titles)
+     })
+  }
+
+  render() {
+
     return (
-<div className="container"> 
-  <div className="row">
-    <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 card-container">
-      {/* CARD COMPONENT STARTS */}
-      <div className="card-flip">
-        {/* FRONT STARTS*/}
-        <div className="card front">
-          <img src="https://cdn2.downdetector.com/static/uploads/logo/How-to-play-Fall-Guys-beta-Ultimate-Knockout-joins-PS-Plus-very-soon_dA5IBWW.jpg" class="card-img-top img-fluid" alt="portada de juego"></img>
-          <div className="card-block text-center">
-            <h6 className="card-title font-weight-bold">Animal Crossing</h6>
+       <div className="container">
+         <div className="books card-container">
+        {this.state.titles.map((title) => (
+          /* CARD COMPONENT STARTS */
+      <div className="card-flip book ">
+      {/* FRONT STARTS */}
+      <div className="card front">
+        <img src={title.path} className="card-img-top img-fluid" alt="portada del juego"></img>
+        <div className="card-block text-center">
+          <div className="row">
+            <div className="col-12">
+              <h6 className="card-title">{title.gameName}</h6>
+            </div>
           </div>
         </div>
-        {/* FRONT ENDS */}
+      </div>
+      {/* FRONT ENDS */}
 
-        {/* BACK STARTS */}
-        <div className="card back">
-          <br></br><br></br>
+      {/* BACK STARTS */}
+      <div className="card back">
+          <br></br>
           <div className="card-block text-center">
             <span className="badge badge-light">Edición</span>
-            <p className="card-text">Ultimate</p>
+            <p className="card-text">{title.edition}</p>
             <span className="badge badge-light">Versión</span>
-            <p className="card-text">2.0</p>
+            <p className="card-text">{title.version}</p>
           </div>
         </div>
         {/* BACK ENDS */}
       </div>
-    {/* CARD COMPONENT ENDS*/}
-    </div>
-  </div>
-</div>
-    )
+    /* CARD COMPONENT ENDS */
+        ))}
+        </div>
+       </div>
+    );
+  }
 }

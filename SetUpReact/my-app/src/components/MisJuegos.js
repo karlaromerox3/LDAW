@@ -10,106 +10,101 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas,far)
 
-class MisJuegos extends React.Component {
+class MisJuegos extends Component {
     constructor(props) {
         super(props);
         this.columns = [
             {
-                key: "name", 
-                text: "Nombre",
+                key: "name",
+                text: "Name",
                 className: "name",
                 sortable: true
             },
             {
                 key: "address",
-                text: "Edición",
-                sortable: false
+                text: "Address",
+                sortable: true
             },
             {
                 key: "postcode",
-                text: "Versión",
+                text: "Postcode",
                 className: "postcode",
-                sortable: false
+                sortable: true
             },
             {
                 key: "rating",
-                text: "Consola",
+                text: "Rating",
                 className: "rating",
                 sortable: true
             },
             {
                 key: "type_of_food",
-                text: "# Ofertas",
+                text: "Type of Food",
                 className: "type_of_food",
                 sortable: true
-            },
-            {
-                key: "action",
-                text: "Acción",
-                cell: (record, index) => {
-                    return (
-                        <React.Fragment>
-                            <button
-                                className="btn btn-primary btn-sm"
-                                onClick={this.editRecord.bind(this, record, index)}
-                                style={{marginRight: '5px'}}>
-                                    <FontAwesomeIcon icon={['fas', 'eye']} /> OFERTAS
-                            </button>
-                        </React.Fragment>
-                    );
-                }
             }
         ];
         this.config = {
-            show_length_menu: false,
-            page_size: 8,
+            page_size: 10,
+            length_menu: [10, 20, 50],
             show_filter: true,
             show_pagination: true,
-            pagination: "basic",
-            no_data_text: 'No hay información disponible!',
-            language: {
-              filter: "Animal Crossing",
-              pagination: {
-                  first: <span><FontAwesomeIcon icon={['fas', 'angle-double-left']} /></span>,
-                  previous: <span><FontAwesomeIcon icon={['fas', 'arrow-circle-left']} /></span>,
-                  next: <span><FontAwesomeIcon icon={['fas', 'arrow-circle-right']} /></span>,
-                  last: <span><FontAwesomeIcon icon={['fas', 'angle-double-right']} /></span>
-              }
-          },
+            button: {
+                excel: false,
+                print: false
+            }
         }
         this.state = {
-            records: records
+            total_pages: 0,
+            records: []
         }
     }
 
-    editRecord = (record, index) => {
-        console.log("Ver ofertas", index, record);
+    componentDidMount(){
+        this.getData();
+    }
+
+    getData = (queryString = "") => {
+        let url = "http://tradekisan.in/react-datatable/sampleAPI/?" + queryString
+        fetch(url, {
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(res => {
+            this.setState({
+                total: res.total,
+                records: res.result
+            })
+        })
+
+    }
+
+    tableChangeHandler = data => {
+        let queryString = Object.keys(data).map((key) => {
+            if(key === "sort_order" && data[key]){
+                return encodeURIComponent("sort_order") + '=' + encodeURIComponent(data[key].order) + '&' + encodeURIComponent("sort_column") + '=' + encodeURIComponent(data[key].column)
+            } else {
+                return encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+            }
+            
+        }).join('&');
+
+        this.getData(queryString);
     }
 
     render() {
         return (
-          <div className="container">
-            <h2>MIS JUEGOS</h2>
-            <div className="row">
-              <div className="col-12 text-right">
-            <label>Escribe el nombre de un juego: </label>
-            </div>
-            </div>
             <ReactDatatable
                 config={this.config}
                 records={this.state.records}
                 columns={this.columns}
-                tHeadClassName={"thead-light"}
-                className={"table table-dark table-hover"}
-                //loading={true}
-                //total_record
-                //dynamic={true}
-            />
-          </div>
+                dynamic={true}
+                total_record={records.length}
+                onChange={this.tableChangeHandler}/>
         );
     }
 }
 
 export default MisJuegos;
-//const app = document.getElementById("root");
-//ReactDOM.render(<misJuegos/>, app);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, Form, Button,FormControl} from 'react-bootstrap';
+import { Dropdown} from 'react-bootstrap';
 import './../App.css';
 import logo from './../resources/logowobg.png';
 
@@ -12,18 +12,6 @@ class Header3 extends Component{
         <nav class="navbar navbar-inverse">
   <div class="container-fluid">
       <img src={logo} className="App-logo" alt="GAMECH logo" />
-        
-    
-
-    <ul class="nav navbar-nav navbar-center">
-      <li>    <h1 className="title">SMASH BROS</h1></li>
-      <li>        <div class="toptext"> <p >Edición: Ultimate </p>&nbsp;&nbsp;&nbsp; <p align="left">Versión: 4.5</p></div>
-    </li>
-
-    </ul>
-
-    
-       
         <Dropdown>
   <Dropdown.Toggle  id="dropdown-basic">
     Buenas tardes, nomUsuario

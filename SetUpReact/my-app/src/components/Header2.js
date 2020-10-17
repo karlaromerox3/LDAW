@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
-import { Dropdown, Form, Button,FormControl} from 'react-bootstrap';
+import { Dropdown, Tooltip, Button, OverlayTrigger} from 'react-bootstrap';
 import './../App.css';
+import { Link } from "react-router-dom";
 import logo from './../resources/logowobg.png';
 import Search from '../components/Search';
 import CardR from '../components/CardR';
+
+//importing icon library
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fas,far)
 
 class Header2 extends Component{
   
@@ -11,7 +20,7 @@ class Header2 extends Component{
     return (
       <div className="App">
         
-        <nav class="navbar navbar-inverse">
+        <nav className="navbar navbar-inverse">
           {/*<div className="position:right">
       <Dropdown>
       <Dropdown.Toggle  id="dropdown-basic">
@@ -23,19 +32,19 @@ class Header2 extends Component{
       </Dropdown.Menu>
       </Dropdown>
     </div>*/}
-  <div class="container-fluid">
+  <div className="container-fluid">
  
 
   
 
 
   <img src={logo} className="App-logo" alt="GAMECH logo" />
-  <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</button>
+  <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</button>
 
               <h1 className="title">GAMECH</h1>
               <div className="App-header">
           <div fixed="top-right">
-          <ul class="nav navbar-nav navbar-right">
+          <ul className="nav navbar-nav navbar-right">
       <li>
       <Dropdown>
       <Dropdown.Toggle  id="dropdown-basic">
@@ -48,9 +57,24 @@ class Header2 extends Component{
       </Dropdown>
       </li>
       <br/>
-      <li> <button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#misOfertas">Mis Juegos</button>
+      <li> 
+        <Link to="./MisJuegos.js">
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#misOfertas">Mis Juegos</button>
+        </Link>
 &nbsp;&nbsp;&nbsp;
-<button type="button" className="btn btn-outline-primary" data-toggle="modal" data-target="#nuevoTitulo">ADD</button>
+
+<Link to='../RegistrarJuego.js'>
+<OverlayTrigger placement="top" 
+  overlay={
+    <Tooltip>
+      Registrar juego
+    </Tooltip>
+  }
+>
+  <Button variant="primary"><FontAwesomeIcon icon={['fas', 'plus']} />&nbsp;<FontAwesomeIcon icon={['fas', 'gamepad']} /></Button>
+</OverlayTrigger>
+</Link>
+
 </li>
       </ul>
           </div>

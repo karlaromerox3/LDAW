@@ -3,8 +3,6 @@ import '../App.css';
 import '../styles/modals.css';
 import '../styles/dropdown.css';
 
-
-
 class Dropdown extends React.Component {
 
   constructor(props) {

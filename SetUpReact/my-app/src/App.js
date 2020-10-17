@@ -3,13 +3,13 @@ import Header1 from './components/Header1';
 import Header2 from './components/Header2';
 import Header3 from './components/Header3';
 
-import logo from './resources/logowobg.png';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import RegistrarJuego from './RegistrarJuego';
+import MisJuegos from './components/MisJuegos';
 class App extends Component{
   
   
@@ -26,6 +26,12 @@ class App extends Component{
          </Route>
          <Route path="/juego" exact>
          <Header3 />
+         </Route>
+         <Route path="/RegistrarJuego.js" exact>
+           <RegistrarJuego/>
+         </Route>
+         <Route path="/MisJuegos.js" exact>
+           <MisJuegos/>
          </Route>
        </Switch>
       </div>

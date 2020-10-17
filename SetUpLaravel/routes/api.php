@@ -17,3 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('games', 'App\Http\Controllers\GameController');
+
+/*Route::get('games', 'App\Http\Controllers\GameController@all')->name('games.all');
+
+Route::post('games', 'App\Http\Controllers\GameController@store')->name('games.store');
+
+Route::get('games/{game}', 'App\Http\Controllers\GameController@show')->name('games.show');
+
+Route::put('games/{game}', 'App\Http\Controllers\GameController@update')->name('games.update');
+
+Route::delete('games/{game}', 'App\Http\Controllers\GameController@destory')->name('games.destroy');*/
+
+Route::resource('titles', 'App\Http\Controllers\TitleController');
+
+Route::get('/titles', 'App\Http\Controllers\TitleController@index')->name('titles.index');
