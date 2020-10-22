@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
-import TitleDrop from "./components/TitleDrop"
-import ConsoleDrop from "./components/ConsoleDrop"
+import TitleDrop from "../components/TitleDrop"
+import ConsoleDrop from "../components/ConsoleDrop"
 
 //Importing Icon library
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,39 +26,6 @@ export default function RegistrarJuego() {
             <TitleDrop/>
         </div>
         
-        <div className="form-group">
-            <FontAwesomeIcon icon={['fas', 'user']} color="white"/>
-            &nbsp;
-            <label for="nombreDueño">Nombre completo:</label>
-            <input type="text" className="form-control" id="nombreDueño" placeholder="Maria Sandoval Arrieta"></input>
-        </div>
-
-        <div className="row">
-            <div className="col-6">
-                <div className="form-group">
-                    <FontAwesomeIcon icon={['fas', 'phone-alt']} color="white"/>
-                    &nbsp;
-                    <label for="exampleInputEmail1">Teléfono:</label>
-                    <input type="text" className="form-control" id="hospital" aria-describedby="emailHelp" placeholder="4423674523"></input>
-                </div>
-            </div>
-            <div className="col-6">
-                <div className="form-group">
-                    <FontAwesomeIcon icon={['fas', 'mobile']} color="white"/>
-                    &nbsp;
-                    <label>Celular:</label>
-                    <input type="text" className="form-control" placeholder="4427003542" aria-label="busquedaNombre" aria-describedby="magGlass"></input>
-                </div>
-            </div>
-        </div>
-
-        <div className="form-group">
-            <FontAwesomeIcon icon={['fas', 'envelope']} color="white"/>
-            &nbsp;
-            <label for="exampleInputEmail1">Correo:</label>
-            <input type="mail" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mariaSandoval@gmail.com"></input>
-        </div>
-
         <div className="form-group">
             <FontAwesomeIcon icon={['fas', 'gamepad']} color="white"/>
             &nbsp;

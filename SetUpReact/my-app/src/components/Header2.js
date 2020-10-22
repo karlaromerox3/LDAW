@@ -87,7 +87,7 @@ class Header2 extends Component{
 </nav>
 <Search/>
 
-    <CardR />
+<CardR />
 
   
 <br />

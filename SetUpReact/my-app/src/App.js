@@ -8,7 +8,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import RegistrarJuego from './RegistrarJuego';
+import RegistrarJuego from './views/RegistrarJuego';
 import MisJuegos from './components/MisJuegos';
 class App extends Component{
   
