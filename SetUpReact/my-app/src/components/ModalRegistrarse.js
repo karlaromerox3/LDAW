@@ -3,15 +3,18 @@ import React from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
 import logoGoogle from './../resources/google.png';
+import GoogleLogin from 'react-google-login';
+
 
 import './../App.css';
 
 class ModalRegistrarse extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       show: false
     }
+
   }
 
 

@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
 import logoGoogle from './../resources/google.png';
+import { GoogleLogin } from 'react-google-login';
+
 
 class ModalIniciaSesion extends Component {
   constructor() {
@@ -20,6 +22,9 @@ class ModalIniciaSesion extends Component {
 
 
   render() {
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
     return (
       <React.StrictMode>
 
@@ -53,11 +58,23 @@ class ModalIniciaSesion extends Component {
       <p>ó</p>
       </ul>
       <ul>
-      <img  src={logoGoogle} className="Google-logo" alt="" />&nbsp;
-<Button variant="primary" type="submit">
-    Registrarse con Google
-  </Button>
+      
+
+
+
+
+    
+      <br/><br></br>
+  <GoogleLogin
+    clientId="684053225371-s5l0g3qrs6figvun3mfh6s9nlqir305b.apps.googleusercontent.com"
+    buttonText="Login"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+  />
+
   
+
   </ul>
   
   
