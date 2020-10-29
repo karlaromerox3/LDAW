@@ -3,15 +3,21 @@ import React from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
 import logoGoogle from './../resources/google.png';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 import './../App.css';
 
 class ModalRegistrarse extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
-      show: false
+      show: false,
+     
     }
+
   }
 
 
@@ -19,7 +25,31 @@ class ModalRegistrarse extends React.Component {
     this.setState({ show: !this.state.show });
   }
 
+  onSubmit(e){
 
+    e.preventDefault()
+  //agarrrar los valores con el id del forms
+    var usuario = document.getElementById("usuario").value;
+    var correo = document.getElementById("correo").value;
+    var pass = document.getElementById("pass").value;
+    var confiPass = document.getElementById("confPasswd").value;
+    var iguales = pass.localeCompare(confiPass);
+
+    
+    //if(iguales==0){
+       const cuenta = {
+        username: usuario,
+        email:correo,
+        password: pass,
+      };
+      axios.post('http://localhost:8000/api/cuentas', cuenta)
+        .then(res => {console.log(res)});
+        
+       //   }
+    }
+  
+
+  
 
   render() {
     return (
@@ -33,38 +63,34 @@ class ModalRegistrarse extends React.Component {
           
         </Modal.Header>
         <Modal.Body>
-        <Form>
-        <Form.Group controlId="formBasicEmail">
+        <Form onSubmit={this.onSubmit}>
+        <Form.Group controlId="usuario">
     <Form.Label>Usuario:</Form.Label>
     <Form.Control type="usuarioRegistro" placeholder="ejemplo23" />
   </Form.Group>
   
-  <Form.Group controlId="formBasicEmail">
+  <Form.Group controlId="correo">
     <Form.Label>Correo:</Form.Label>
     <Form.Control type="correoRegistro" placeholder="ejemplo23@ejemplo.com" />
   </Form.Group>
 
-  <Form.Group controlId="formBasicPassword">
+  <Form.Group controlId="pass">
     <Form.Label>Contraseña:</Form.Label>
     <Form.Control type="contraseñaRegistro" placeholder="" />
   </Form.Group>
-  
+  <Form.Group controlId="confPasswd">
+    <Form.Label>Confirmar Contraseña:</Form.Label>
+    <Form.Control type="contraseña" placeholder="" />
+  </Form.Group>
   <ul>
 
   <Button variant="primary" type="submit">
     Registrarse
   </Button>
   </ul>
-  <ul>
-      <p>ó</p>
-      </ul>
-      <ul>
-      <img  src={logoGoogle} className="Google-logo" alt="" />&nbsp;
-<Button variant="primary" type="submit">
-    Registrarse con Google
-  </Button>
   
-  </ul>
+  
+
   
   
 </Form>

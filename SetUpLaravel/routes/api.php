@@ -23,3 +23,4 @@ Route::resource('games', 'App\Http\Controllers\GameController');
 Route::resource('titles', 'App\Http\Controllers\TitleController');
 
 Route::resource('consoles', 'App\Http\Controllers\ConsoleController');
+Route::resource('cuentas', 'App\Http\Controllers\CuentasController');

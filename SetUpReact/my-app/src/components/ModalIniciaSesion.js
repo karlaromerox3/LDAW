@@ -7,12 +7,17 @@ import LoginButtonG from './LoginButtonG';
 
 
 class ModalIniciaSesion extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+
     this.state = {
       show: false
     }
   }
+  
+   
+  
 
 
   handleModal() {
@@ -34,30 +39,26 @@ class ModalIniciaSesion extends Component {
           </div>
         </Modal.Header>
         <Modal.Body>
-        <Form>
-  <Form.Group controlId="formBasicEmail">
+        <Form >
+  <Form.Group controlId="username">
     <Form.Label>Correo:</Form.Label>
     <Form.Control type="correo" placeholder="ejemplo23@ejemplo.com" />
   </Form.Group>
 
-  <Form.Group controlId="formBasicPassword">
+  <Form.Group controlId="password">
     <Form.Label>Contraseña:</Form.Label>
     <Form.Control type="contraseña" placeholder="" />
   </Form.Group>
   
+  
   <ul>
 
   <Button variant="primary" type="submit">
-    Registrarse
+    Inicia Sesión
   </Button>
   </ul>
-  <ul>
-      <p>ó</p>
-      </ul>
-      <ul>
-      <LoginButtonG/>
-
-  </ul>
+ 
+     
   
   
 </Form>
