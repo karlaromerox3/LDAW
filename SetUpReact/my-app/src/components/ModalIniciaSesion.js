@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import {  Button,Modal, Form} from 'react-bootstrap';
 import logo from './../resources/logowobg.png';
 import logoGoogle from './../resources/google.png';
+import LoginButtonG from './LoginButtonG';
+
 
 class ModalIniciaSesion extends Component {
   constructor() {
@@ -53,11 +55,8 @@ class ModalIniciaSesion extends Component {
       <p>ó</p>
       </ul>
       <ul>
-      <img  src={logoGoogle} className="Google-logo" alt="" />&nbsp;
-<Button variant="primary" type="submit">
-    Registrarse con Google
-  </Button>
-  
+      <LoginButtonG/>
+
   </ul>
   
   

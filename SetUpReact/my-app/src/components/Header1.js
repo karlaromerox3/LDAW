@@ -5,6 +5,7 @@ import ModalIniciaSesion from '../components/ModalIniciaSesion';
 import ModalRegistrarse from '../components/ModalRegistrarse';
 import Search from '../components/Search';
 import CardNR from '../components/CardNR';
+import LoginButtonG from './LoginButtonG';
 
 
 
@@ -20,6 +21,7 @@ class Header1 extends Component{
               <h1 className="title">GAMECH</h1>
     <ul class="nav navbar-nav navbar-right">
       <li>
+        <LoginButtonG/>
       <ModalIniciaSesion/>
         &nbsp;
         <ModalRegistrarse/>

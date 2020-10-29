@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import logo from './../resources/logowobg.png';
 import Search from '../components/Search';
 import CardR from '../components/CardR';
+import { useGoogleAuth } from "../googleAuth";
+import LogoutButtonG from './LogoutButtonG';
+
+
 
 //importing icon library
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,6 +54,7 @@ class Header2 extends Component{
       <Dropdown.Toggle  id="dropdown-basic">
       Buenas tardes, nomUsuario
       </Dropdown.Toggle>
+      <LogoutButtonG/>
 
       <Dropdown.Menu>
       <Dropdown.Item href="#/action-1">Cerrar Sesión</Dropdown.Item>
