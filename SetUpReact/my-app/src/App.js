@@ -9,6 +9,8 @@ import PrivateRouter from './PrivateRouter';
 import PublicRouter from './PublicRouter';
 import './App.css';
 
+export const API_BASE_URL = 'http://localhost:8000/api/';
+
 function App() {
   return (
     <div className="App">

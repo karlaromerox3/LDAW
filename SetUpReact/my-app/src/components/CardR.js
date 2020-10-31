@@ -16,11 +16,11 @@ library.add(fas,far)
 
 export default class CardR extends Component {
   state = {
-    titles: []
+    titles: [],
   }
 
   componentDidMount() {
-    const url = API_BASE_URL + 'titles/index';
+    const url = API_BASE_URL + 'titles';
     axios.get(url).then(response => response.data)
     .then((data) => {
       this.setState({ titles: data })
@@ -34,25 +34,19 @@ export default class CardR extends Component {
        <div className="container">
          <div className="books card-container">
         {this.state.titles.map((title) => (
-          /* CARD COMPONENT STARTS */
-      <div className="card-flip book ">
-      {/* FRONT STARTS */}
+        <div className="card-flip book ">
+
       <div className="card front">
-        <img src={title.path} className="card-img-top img-fluid" alt="portada del juego"></img>
+        <img src={"http://localhost:8000/storage/images/" + title.path} className="card-img-top img-fluid" alt="portada del juego"></img>
         <div className="card-block text-center">
           <div className="row">
-            <div className="col-8">
+            <div className="col-12">
               <h6 className="card-title">{title.gameName}</h6>
-            </div>
-            <div className="col-4">
-              <h5><span className="badge badge-light">312</span></h5>
             </div>
           </div>
         </div>
       </div>
-      {/* FRONT ENDS */}
 
-      {/* BACK STARTS */}
       <div className="card back">
           <br></br>
           <div className="card-block text-center">
@@ -63,9 +57,9 @@ export default class CardR extends Component {
             <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Ver juegos"><FontAwesomeIcon icon={['fas', 'angle-double-right']} /></button>
           </div>
         </div>
-        {/* BACK ENDS */}
+
       </div>
-    /* CARD COMPONENT ENDS */
+
         ))}
         </div>
        </div>

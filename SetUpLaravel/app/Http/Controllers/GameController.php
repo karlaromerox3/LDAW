@@ -16,6 +16,7 @@ class GameController extends Controller
      */
     public function index()
     {
+        //this needs to be sorted by gameName ascending
         $games = Game::all();
         return response()->json($games);
     }
@@ -38,7 +39,14 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $game = new Game;
+
+        $game->title_id= $request-> title_id;
+        $game->user_id= $request-> user_id;
+        $game->console_id = $request -> console_id;
+        $game->condition = $request -> condition;
+
+        $game->save();  
     }
 
     /**
@@ -49,7 +57,8 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        //
+        $count = Game::where('title_id', $id)->count();
+        return $count;
     }
 
     /**
