@@ -47,8 +47,7 @@ class TitleController extends Controller
      */
     public function show($id)
     {
-        $titles = Title::all();
-        return response()->json($titles);
+        //
     }
 
     /**

@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import RegistrarJuego from './views/RegistrarJuego';
 import MisJuegos from './components/MisJuegos';
+
+export const API_BASE_URL = 'http://localhost:8000/api/';
 class App extends Component{
   
   

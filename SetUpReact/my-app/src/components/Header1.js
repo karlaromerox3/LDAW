@@ -4,7 +4,7 @@ import logo from '../resources/logowobg.png';
 import ModalIniciaSesion from '../components/ModalIniciaSesion';
 import ModalRegistrarse from '../components/ModalRegistrarse';
 import Search from '../components/Search';
-import CardNR from '../components/CardNR';
+import CardR from '../components/CardR';
 
 
 
@@ -31,7 +31,7 @@ class Header1 extends Component{
   </div>
 </nav>
 <Search/>
-      <CardNR />
+      <CardR />
         </div>
       </div>
     )

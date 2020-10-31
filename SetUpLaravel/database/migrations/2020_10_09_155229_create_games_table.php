@@ -18,7 +18,7 @@ class CreateGamesTable extends Migration
             $table->foreignId('title_id')->constrained('titles');
             $table->foreignId('user_id')->constrained('myusers');
             $table->foreignId('console_id')->constrained('consoles');
-            $table->text('condition');
+            $table->text('condition')->nullable();
             //$table->timestamps();
         });
     }

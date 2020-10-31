@@ -59,7 +59,7 @@ class Header2 extends Component{
       <br/>
       <li> 
         <Link to="./MisJuegos.js">
-        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#misOfertas">Mis Juegos</button>
+        <button type="button" className="btn btn-primary">Mis Juegos</button>
         </Link>
 &nbsp;&nbsp;&nbsp;
 
@@ -71,7 +71,7 @@ class Header2 extends Component{
     </Tooltip>
   }
 >
-  <Button variant="primary"><FontAwesomeIcon icon={['fas', 'plus']} />&nbsp;<FontAwesomeIcon icon={['fas', 'gamepad']} /></Button>
+  <Button variant="primary"><FontAwesomeIcon icon={['fas', 'gamepad']} /></Button>
 </OverlayTrigger>
 </Link>
 
