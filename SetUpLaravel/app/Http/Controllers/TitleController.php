@@ -14,8 +14,28 @@ class TitleController extends Controller
      */
     public function index()
     {
-        $titles = Title::all();
+        $titles = Title::orderBy('gameName', 'asc')
+        ->get();
         return response()->json($titles);
+    }
+
+    /**
+     * Filter by name.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function filter(Request $request)
+    {
+        if($request->inputValue != '') {
+            $titles = Title::where('gameName', 'LIKE', '%'. $request->inputValue .'%')
+            ->get();
+        } else {
+            $titles = Title::orderBy('gameName', 'asc')
+            ->get();
+        }
+        
+        return $titles;
     }
 
     /**
@@ -47,7 +67,8 @@ class TitleController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = Title::where('id', $id)->get();
+        return response()->json($title);
     }
 
     /**

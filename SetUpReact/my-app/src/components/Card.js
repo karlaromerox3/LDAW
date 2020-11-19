@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
+//STYLES
 import '../card.css';
 import 'bootstrap/dist/css/bootstrap.css';
+
+//COMPONENTS
+import {Button} from 'reactstrap';
+import SimpleTooltip from '../components/SimpleTooltip';
+
 
 //API CALLS
 import axios from 'axios';
@@ -11,7 +19,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-
 library.add(fas,far)
 
 export default class CardR extends Component {
@@ -20,12 +27,27 @@ export default class CardR extends Component {
   }
 
   componentDidMount() {
-    const url = API_BASE_URL + 'titles';
-    axios.get(url).then(response => response.data)
-    .then((data) => {
-      this.setState({ titles: data })
-      console.log(this.state.titles)
-     })
+    this.getTitles();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.inputValue != prevProps.inputValue) {
+      this.getTitles();
+    }
+  }
+
+  getTitles() {
+    const params = {
+      inputValue: this.props.inputValue
+    }
+    axios.post(API_BASE_URL + 'titles/filter', params)
+      .then(res => {
+        const titles = res.data;
+        
+        this.setState({ titles });
+
+        console.log(this.state);
+      })
   }
 
   render() {
@@ -54,7 +76,13 @@ export default class CardR extends Component {
             <p className="card-text">{title.edition}</p>
             <span className="badge badge-light">Versión</span>
             <p className="card-text">{title.version}</p>
-            <button type="button" className="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Ver juegos"><FontAwesomeIcon icon={['fas', 'angle-double-right']} /></button>
+            <Link   to={{
+                        pathname: 'VerJuegos/'+ title.id,
+                        state:title.id
+                      }}>
+            <Button color="primary" size="sm" id="verJuegos"><FontAwesomeIcon icon={['fas', 'angle-double-right']} /></Button>
+              <SimpleTooltip placement="top" target="verJuegos">Ver juegos</SimpleTooltip>
+            </Link>
           </div>
         </div>
 

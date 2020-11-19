@@ -26,7 +26,15 @@ $h6-font-size: 1rem;
 
 .badge{
     background-color: #b8cbe2;
-    color: #000000;
+    color: black !important;
+  }
+
+  .badge-danger{
+    background-color: #FF5C77;
+  }
+
+  .badge-success{
+    background-color: #81FFC8;
   }
 
 
@@ -47,7 +55,7 @@ h6{
 h2,h3,h4,h5{
     color: white;
     text-align: center;
-    font-family: 'Sulphur Point', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 };
 
 
@@ -71,25 +79,8 @@ label{
 }
 
 // Tables
-.thead-light {
-    th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
-      border-color: $table-border-color;
-    }
-}
-
-$table-head-color: black;
-$table-head-bg: #DCE6F2;
-$table-border-color: #F0F4F9;
-
-$table-accent-bg:               rgba($white,.05) !default;
-$table-dark-hover-bg:           #F0F4F9;
-$table-dark-hover-color:        black;
-
 $table-dark-bg:               black;
-$table-dark-border-color:      #DCE6F2;
-
+$table-dark-border-color:      #649CFC;
 // Tooltips
 
 $tooltip-bg:                  $gray-700 !default;
@@ -125,6 +116,17 @@ $custom-file-border-color:          $gray-700 !default;
 input::placeholder {
     color: rgb(209, 209, 209) !important;
     opacity: 1;
+}
+  
+.error {
+    font-size: 0.8em;
+    color: white;
+    display: relative;
+}
+
+.success {
+    font-size: 0.8em;
+    display: relative;
 }
 
 // Dropdowns

@@ -15,8 +15,14 @@ class Game extends Model
     //fillable fields
     protected $fillable = ['title_id, user_id, console_id, condition'];
 
-    public function getGames(){
-        $count = Games::where('title_id', 1)->count();
-        return $count;
+    //Get console of game
+    public function console(){
+        return $this->belongsTo('App\Models\Console', 'console_id');
+    }
+
+    //Get title of game
+    public function title(){
+        return $this->belongsTo('App\Models\Title', 'title_id');
     }
 }
+

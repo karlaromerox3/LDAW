@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
 //COMPONENTS
-import {Button, Table, Row, InputGroup, InputGroupAddon, InputGroupText, Input, FormGroup, Label} from 'reactstrap';
+import {Button, Table, Row, Badge} from 'reactstrap';
 import LogoutButtonG from '../components/LogoutButtonG';
 import SimpleTooltip from '../components/SimpleTooltip';
 import Swal from 'sweetalert2';
@@ -21,23 +21,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas,far)
 
-export default class MisJuegos extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputValue: '',
-      games: [],
-      titles: [],
-    }
-    this.onInputChange = this.onInputChange.bind(this);
-  }
-
-  onInputChange(e) {
-    e.preventDefault();
-    this.setState({ inputValue: e.target.value });
-    console.log(e.target.value)
-  }
+export default class VerJuegos extends Component {
 
     state = {
         games: [],
@@ -45,54 +29,79 @@ export default class MisJuegos extends Component {
       }
 
     componentDidMount() {
+        this.getTitle();
         this.getGame();
       }
 
       getGame(){
         let urlElements = window.location.href.split('/');
-        axios.get(API_BASE_URL + 'games/myGames/' + urlElements[4])
+        axios.get(API_BASE_URL + 'games/' + urlElements[4] )
           .then(res => {
             const games = res.data;
             console.log(games);
             this.setState({ games });
             let empty = this.state.games.length;
-          if(empty === 0){
-            Swal.fire(
-              'ERROR!',
-              'No existen registros aún.',
-              'error'
-            );
-          }
+            if(empty === 0){
+              Swal.fire(
+                'ERROR!',
+                'No existen registros de este título.',
+                'error'
+              ).then(function() {
+                window.location = "http://localhost:3000/registrado";
+            });
+            }
           })
       }
 
+      getTitle(){
+        let urlElements = window.location.href.split('/');
+        axios.get(API_BASE_URL + 'titles/' + urlElements[4] )
+          .then(res => {
+            const titles = res.data;
+            console.log(titles);
+            this.setState({ titles });
+          })
+      }
     render() {
         return (
             <div>
                 <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <h1 className="title">MIS JUEGOS</h1>
+            <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+            <h1 className="title">GAMECH</h1>
             <div className="App-header">
-              <div fixed="top-right">
+            <div fixed="top-right">
+                <Row>
                       <LogoutButtonG />
+                </Row>
+                &nbsp;&nbsp;&nbsp;
+                <Row>
+                    {/*<Link to={{
+                            pathname: '../MisJuegos/' + id,
+                            state: id
+                        }}>*/}
+                       <Link to={{
+                            pathname: '../MisJuegos/1'
+                        }}> 
+                      <Button color="primary">Mis Juegos</Button>
+                    </Link>
+                    &nbsp;&nbsp;&nbsp;
+                    <Link to='../RegistrarJuego/1'>
+                        <Button color="primary" id="registrar">Registrar juego</Button>
+                    </Link>
+                  </Row>
               </div>
               <br />
             </div>
           </div>
         </nav>
         <div className="container">
-        <FormGroup>
-          <Label>Escribe el nombre de un juego...</Label>
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText><FontAwesomeIcon icon={['fas', 'search']} color="#2b2d30" /></InputGroupText>
-            </InputGroupAddon>
-            <Input onChange={this.onInputChange} type="text" className="form-control" placeholder="Animal crossing" aria-label="buscarTitulo" aria-describedby="buscarTitulo"></Input>
-          </InputGroup>
-        </FormGroup>
-        </div>
-        <div className="container">
+        {this.state.titles.map((title) => (
+            <>
+            <Badge  style={{fontSize: '3rem'}}>{title.gameName} :: {title.edition} :: {title.version}</Badge>
+            </>
+        ))}
             <div style={{
             maxHeight: '400px',
             overflowY: 'auto'
@@ -101,11 +110,9 @@ export default class MisJuegos extends Component {
         <Table dark hover>
             <thead>
               <tr>
-                  <th>Nombre</th>
-                  <th>Edición</th>
-                  <th>Versión</th>
+                  <th>Dueño/a</th>
                   <th>Consola</th>
-                  <th>Num.ofertas</th>
+                  <th>Condiciones</th>
                   <th>Acción</th>
               </tr>
             </thead>
@@ -113,14 +120,12 @@ export default class MisJuegos extends Component {
             <>
             <tbody>
                 <tr key={game.id}>
-                  <td>{game.title.gameName}</td>
-                  <td>{game.title.edition}</td>
-                  <td>{game.title.version}</td>
+                  <td>{game.user_id}</td>
                   <td>{game.console.name}</td>
-                  <td></td>
+                  <td>{game.condition}</td>
                   <td>
                     <Row>
-                        <Button color="primary">Ver ofertas</Button>
+                        <Button color="primary">Registrar oferta</Button>
                     </Row>
                   </td>
                 </tr>

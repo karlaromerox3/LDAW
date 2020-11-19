@@ -21,6 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('games', 'App\Http\Controllers\GameController');
 
 Route::resource('titles', 'App\Http\Controllers\TitleController');
+Route::post('titles/filter', 'App\Http\Controllers\TitleController@filter');
+Route::get('games/filter', 'App\Http\Controllers\GameController@filter');
+
+Route::get('games/myGames/{id}', 'App\Http\Controllers\GameController@myGames');
 
 Route::resource('consoles', 'App\Http\Controllers\ConsoleController');
 Route::resource('cuentas', 'App\Http\Controllers\CuentasController');

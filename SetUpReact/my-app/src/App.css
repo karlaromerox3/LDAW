@@ -17,9 +17,6 @@
 .App-header {
   padding: 10px;
 }
-<<<<<<< HEAD
-
-=======
 .center{
   width:50%;
   height:50%;
@@ -44,7 +41,6 @@ ul {
 .title{
   font-size: 12vh;
 };
->>>>>>> Mariana/Componentes
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

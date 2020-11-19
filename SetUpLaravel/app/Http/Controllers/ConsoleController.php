@@ -16,7 +16,8 @@ class ConsoleController extends Controller
      */
     public function index()
     {
-        $consoles = Console::all();
+        $consoles = Console::orderBy('name', 'asc')
+        ->get();
         return response()->json($consoles);
     }
 

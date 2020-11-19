@@ -57,8 +57,47 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        $count = Game::where('title_id', $id)->count();
-        return $count;
+        $games = Game::with('console')
+        ->where('title_id', $id)->get();
+        return $games;
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function myGames($id)
+    {
+        $games = Game::with('title')
+        ->with('console')
+        ->where('user_id', $id)
+        ->get();
+        return $games;
+    }
+
+    /**
+     * Filter by name.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function filter(Request $request)
+    {
+        if($request->inputValue != '') {
+            $games = Game::with('title')
+            ->with('console')
+            ->where('user_id', $statusId)
+            ->where('gameName', 'LIKE', '%'. $request->inputValue .'%')
+            ->get();
+        } else {
+            $games = Game::with('title')
+            ->with('console')
+            ->where('user_id', $id)
+            ->get();
+        }
+        return $games;
     }
 
     /**
