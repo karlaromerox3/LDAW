@@ -33,19 +33,28 @@ class ModalRegistrarse extends React.Component {
     var correo = document.getElementById("correo").value;
     var pass = document.getElementById("pass").value;
     var confiPass = document.getElementById("confPasswd").value;
-    var iguales = pass.localeCompare(confiPass);
+ 
+
+    //var iguales = pass.localeCompare(confiPass);
 
     
     //if(iguales==0){
        const cuenta = {
-        username: usuario,
+        name: usuario,
         email:correo,
         password: pass,
       };
-      axios.post('http://localhost:8000/api/cuentas', cuenta)
+      axios.post('http://localhost:8000/api/account/register', cuenta)
         .then(res => {console.log(res)});
         
        //   }
+       Swal.fire(
+        '¡Listo!',
+        'Datos guardados',
+        'success'
+        ).then(function() {
+            window.location = "http://localhost:3000/admin/ViewDonors";
+        });
     }
   
 
@@ -66,21 +75,21 @@ class ModalRegistrarse extends React.Component {
         <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="usuario">
     <Form.Label>Usuario:</Form.Label>
-    <Form.Control type="usuarioRegistro" placeholder="ejemplo23" />
+    <Form.Control type="text" placeholder="ejemplo23" />
   </Form.Group>
   
   <Form.Group controlId="correo">
     <Form.Label>Correo:</Form.Label>
-    <Form.Control type="correoRegistro" placeholder="ejemplo23@ejemplo.com" />
+    <Form.Control type="email" placeholder="ejemplo23@ejemplo.com" />
   </Form.Group>
 
   <Form.Group controlId="pass">
     <Form.Label>Contraseña:</Form.Label>
-    <Form.Control type="contraseñaRegistro" placeholder="" />
+    <Form.Control type="password" placeholder="" />
   </Form.Group>
   <Form.Group controlId="confPasswd">
     <Form.Label>Confirmar Contraseña:</Form.Label>
-    <Form.Control type="contraseña" placeholder="" />
+    <Form.Control type="password" placeholder="" />
   </Form.Group>
   <ul>
 

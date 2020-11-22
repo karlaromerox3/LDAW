@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import  { Redirect } from 'react-router-dom'
 
 //STYLES
 import './../App.css';
@@ -36,6 +37,9 @@ export default class MainViewR extends Component {
   }
 
   render() {
+    if(!localStorage.getItem('token')){
+      return <Redirect to='login'/>
+  }
     return (
       <div>
         <nav className="navbar navbar-inverse">
@@ -82,7 +86,12 @@ export default class MainViewR extends Component {
         </div>
         <Card inputValue={this.state.inputValue}
         />
+          
+
+         
       </div>
+      
+  
 
 
     )

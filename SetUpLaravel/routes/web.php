@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 use Illuminate\Database\Connection;
-
+//Auth::routes();
 Route::get('/', function () {
 
     // Test database connection
@@ -31,3 +31,8 @@ Route::get('/', function () {
 
     return view('welcome');
 });
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

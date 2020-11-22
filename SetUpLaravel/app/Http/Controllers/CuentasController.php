@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cuentas; 
+
 
 class CuentasController extends Controller
 {
@@ -34,15 +36,16 @@ class CuentasController extends Controller
      */
     public function store(Request $request)
     {
+        die("texto");
         //Instanciamos la clase Account
-        $cuenta = new Cuenta;
+       /* $cuenta = new Cuenta;
         //Declaramos los datos con los enviado en el request
         $account->username = $request->username;
         $account->email = $request->email;
-
         $account->password = $request->password;
         //Guardamos el cambio en nuestro modelo
         $account->save();
+        */
     }
 
     /**

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import {  Button } from "reactstrap";
 
 //Components
 import {Label, Input, FormGroup, InputGroupAddon, InputGroup, InputGroupText } from 'reactstrap';
 import logo from '../resources/logowobg.png';
-import ModalIniciaSesion from '../components/ModalIniciaSesion';
 import ModalRegistrarse from '../components/ModalRegistrarse';
 import LoginButtonG from '../components/LoginButtonG';
 import Card from '../components/Card';
+import ModalIniciaSesion from '../components/ModalIniciaSesion';
 
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -32,6 +34,7 @@ export default class MainViewR extends Component {
   }
 
   render() {
+   
     return (
       <div className="content">
         <nav class="navbar navbar-inverse" fixed="top">
@@ -41,7 +44,7 @@ export default class MainViewR extends Component {
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <LoginButtonG />
-                <ModalIniciaSesion />
+                <ModalIniciaSesion/>
                 &nbsp;
                 <ModalRegistrarse />
               </li>

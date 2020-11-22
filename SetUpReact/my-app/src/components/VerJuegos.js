@@ -63,6 +63,9 @@ export default class VerJuegos extends Component {
           })
       }
     render() {
+      if(!localStorage.getItem('token')){
+        return <Redirect to='login'/>
+    }
         return (
             <div>
                 <nav className="navbar navbar-inverse">

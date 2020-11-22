@@ -125,6 +125,9 @@ export default class RegistrarJuego extends Component {
   }
 
   render() {
+    if(!localStorage.getItem('token')){
+      return <Redirect to='login'/>
+  }
     const { errors } = this.state;
     return (
       <>
