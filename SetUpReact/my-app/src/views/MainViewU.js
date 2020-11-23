@@ -36,11 +36,16 @@ export default class MainViewR extends Component {
   render() {
    
     return (
-      <div className="content">
-        <nav class="navbar navbar-inverse" fixed="top">
+      <div class="content">
+      <div class="container">
+          <div class="row">
+              <div class="col-12" >        <nav class="navbar navbar-inverse" fixed="top">
           <div class="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <h1 className="title">GAMECH</h1>
+          <div class="row justify-content-center">
+
+<img src={logo} className="App-logo" alt="GAMECH logo" />
+</div>            
+<h1 className="title">GAMECH</h1>
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <LoginButtonG />
@@ -69,6 +74,11 @@ export default class MainViewR extends Component {
         />
 
       </div>
+      </div>
+      </div>
+      </div>
+      
+
     )
   }
 }
