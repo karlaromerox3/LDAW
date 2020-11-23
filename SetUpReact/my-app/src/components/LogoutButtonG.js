@@ -7,7 +7,7 @@ const LogoutButton = () => {
     const { signOut } = useGoogleAuth();
 
     return (
-        <Button outline color="danger" onClick={signOut}>Logout</Button>
+        <Button outline color="danger" onClick={signOut}>Logout Google</Button>
 
       );
 };

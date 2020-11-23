@@ -44,9 +44,13 @@ export default class MainViewR extends Component {
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <LoginButtonG />
-                <ModalIniciaSesion/>
+                <Link to="/login">
+                <button className="btn btn-outline-primary" >Iniciar Sesión</button>
+                </Link>
                 &nbsp;
-                <ModalRegistrarse />
+                <Link to="/register">
+                <button className="btn btn-outline-primary" >Registrarse</button>
+                </Link>
               </li>
             </ul>
           </div>

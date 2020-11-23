@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { Button, FormGroup, Label, Col, Input, Row, Dropdown, Alert } from "reactstrap";
+import  { Redirect } from 'react-router-dom'
 
 import logo from './../resources/logowobg.png';
 import LogoutButtonG from '../components/LogoutButtonG';

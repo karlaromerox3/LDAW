@@ -12,6 +12,7 @@ import Card from '../components/Card';
 import { useGoogleAuth } from "../googleAuth";
 import LogoutButtonG from '../components/LogoutButtonG';
 import SimpleTooltip from '../components/SimpleTooltip';
+import Logout from '../components/Logout';
 
 //ICONS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -40,17 +41,24 @@ export default class MainViewR extends Component {
     if(!localStorage.getItem('token')){
       return <Redirect to='login'/>
   }
+
+  
     return (
       <div>
         <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
+          <div className="container-fluid" >
             <img src={logo} className="App-logo" alt="GAMECH logo" />
             <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
             <h1 className="title">GAMECH</h1>
             <div className="App-header">
               <div fixed="top-right">
+              <div id="saludo"></div>
+
                 <Row>
+                  <div id="saludo"></div>
+
                       <LogoutButtonG />
+                      <Logout/>
                 </Row>
                 &nbsp;&nbsp;&nbsp;
                 <Row>

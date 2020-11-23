@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Form, Button, Container } from 'react-bootstrap'
+import { Form, Button, Container, Col,Row } from 'react-bootstrap'
 import axios from 'axios';
 import { Link, Redirect } from "react-router-dom";
+import Swal from 'sweetalert2';
+import logo from '../resources/logowobg.png';
 
 export default class Login extends Component {
 constructor(props) {
@@ -26,36 +28,64 @@ handleSubmit(event) {
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', res.config.data);
       localStorage.setItem('auth', true);
+      window.location ="http://localhost:3000/registrado";
   }).catch(function (err){
       console.log(err)
       localStorage.setItem('auth', false);
-
+      Swal.fire(
+        'ERROR',
+        'Usuario y/o contraseña incorrecto',
+        'error'
+        )
   })
  
   event.preventDefault();
 }
 
 render() {
+  if(localStorage.getItem('token')){
+    return <Redirect to='/registrado'/>
+}
   return (
+    <div class="container-fluid" allign="center">
+            <img src={logo} className="App-logo" alt="GAMECH logo" />
+            <h1 className="title">GAMECH</h1>
     <Container style={{ marginTop: '100px' }}>
       <Form>
-        <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Email address</Form.Label>
+        <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Correo Electronico:</Form.Label>
             <Form.Control type="text" placeholder="Enter email" name="email" value={this.state.email} onChange={this.onChange}/>           
         </Form.Group>
         
         <Form.Group controlId="formBasicPassword" style={{ width: '300px' }}>
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Contraseña:</Form.Label>
             <Form.Control type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.onChange}/>
         </Form.Group>
         
-       <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-       </Form.Group>
-       <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-        Submit
+        <Container>
+  <Row>
+    <Col><Link to="/">
+                <Button >Regresar</Button>
+                </Link> </Col>
+        <Col>
+        <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+        Iniciar Sesión
         </Button>
+        </Col>
+  </Row>
+</Container>
+         
+
+        
+         
+      
+        
+    
+      
+        <br/>
+       
       </Form>
     </Container>
+    </div>
    )
  }
 }

@@ -9,26 +9,26 @@ import Register from './components/Register'
 import MainViewU from './views/MainViewU';
 import MainViewR from './views/MainViewR';
 import Dashboard from './components/Dashboard'
+import MisJuegos from './components/MisJuegos';
+import VerJuegos from "./components/VerJuegos";
+import RegistrarJuego from './views/RegistrarJuego';
+import PrivateRouter from './PrivateRouter';
+import PublicRouter from './PublicRouter';
 
 function App() {
   return (
 <Router>
-  <Navbar bg="dark" variant="dark" expand="lg">
-     <Navbar.Brand href="#home">React-JWT Login</Navbar.Brand>
-     <Navbar.Toggle aria-controls="basic-navbar-nav" />  
-       <Navbar.Collapse id="basic-navbar-nav">
-         <Nav className="mr-auto">
-           <Nav.Link href='/login'>Login</Nav.Link>
-           <Nav.Link href='/register'>Register</Nav.Link>
-         </Nav>
-       </Navbar.Collapse>
-   </Navbar>
+ 
          <Switch>
          <Route exact path="/" component={MainViewU} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/registrado" component={MainViewR} />
+        <Route path="/RegistrarJuego/:id" exact><RegistrarJuego/></Route>
+        <PrivateRouter path="/registrado" component={MainViewR}/>  
+<Route path="/VerJuegos/:id" exact><VerJuegos/></Route> 
 
+<Route path="/MisJuegos/:id" exact><MisJuegos/></Route> 
       </Switch>
     </Router>
   );

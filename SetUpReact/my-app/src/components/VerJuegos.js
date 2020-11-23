@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import  { Redirect } from 'react-router-dom'
 
 //COMPONENTS
 import {Button, Table, Row, Badge} from 'reactstrap';
