@@ -91,10 +91,17 @@ class RegisterController extends Controller
         $user->save();
     }
    
-    public function show($email)
-    {
-        return User::where('email',$email)->get();
+    
 
+    public function nombre($email){
+        $datos= DB::table('users')
+                    ->select('users.id','users.name')
+                    ->where('users.email',$email)
+                    ->get();
+
+        return $datos;
     }
+
+   
 
 }

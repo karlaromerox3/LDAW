@@ -36,7 +36,7 @@ Route::group([
 
 //Cuentas
 Route::resource('account/register', 'App\Http\Controllers\Auth\RegisterController');
-Route::get('account/user/{email}', 'App\Http\Controllers\Auth\RegisterController@show');
+Route::get('account/user/{email}', 'App\Http\Controllers\Auth\RegisterController@nombre');
 
 //END CUENTAS
 Route::resource('games', 'App\Http\Controllers\GameController');

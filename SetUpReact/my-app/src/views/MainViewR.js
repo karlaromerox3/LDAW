@@ -41,32 +41,27 @@ export default class MainViewR extends Component {
   }
 
  
-  ax(){
-   const id=localStorage.getItem("email");
-    axios.get("http://localhost:8000/api/account/user/"+ id)
+ 
+  
+
+  componentDidMount(){
+    axios.get("http://localhost:8000/api/account/user/"+localStorage.getItem("email"))
     .then(function (resp){
       console.log(resp);
-      localStorage.setItem("nombre", resp.data[0].name);
-      localStorage.setItem("id", resp.data[0].id);
+     localStorage.setItem("id", resp.data[0].id) ;
+     localStorage.setItem("name", resp.data[0].name) ;
 
+    // localStorage.removeItem("email");
     } );
   
-    
   }
-
   
   render() {
     if(!localStorage.getItem('token')){
       return <Redirect to='login'/>
   }
 
-  /*window.onload = function(){
-    axios.post("http://localhost:8000/api/auth/me")
-    .then(function (resp){
-      console.log(resp);
-      localStorage.setItem("name",resp.config.data);
-    } );
-  }*/
+   
     return (
       <div>
         <nav className="navbar navbar-inverse">
@@ -92,13 +87,11 @@ export default class MainViewR extends Component {
                             pathname: '../MisJuegos/' + id,
                             state: id
                         }}>*/}
-                       <Link to={{
-                            pathname: '../MisJuegos/1'
-                        }}> 
+                       <Link to={`../MisJuegos/${localStorage.getItem("id")}`}> 
                       <Button color="primary">Mis Juegos</Button>
-                    </Link>
+                      </Link>
                     &nbsp;&nbsp;&nbsp;
-                    <Link to='../RegistrarJuego/1'>
+                    <Link to={`../RegistrarJuego/${localStorage.getItem("id")}`}>
                         <Button color="primary" id="registrar">Registrar juego</Button>
                     </Link>
                   </Row>
@@ -107,7 +100,9 @@ export default class MainViewR extends Component {
             </div>
           </div>
         </nav>
-       
+       <div class="row justify-content-center">
+                      <h5>Hola, {localStorage.getItem("name")}</h5>
+       </div>
         <div className="container">
 
         <FormGroup>

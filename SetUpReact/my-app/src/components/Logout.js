@@ -6,7 +6,7 @@ import  { Redirect } from 'react-router-dom'
 
 const LogoutButton = () => {
     const logout = () => {
-        localStorage.removeItem("nombre");
+        localStorage.removeItem("name");
         localStorage.removeItem("email");
 
         localStorage.removeItem("id");
