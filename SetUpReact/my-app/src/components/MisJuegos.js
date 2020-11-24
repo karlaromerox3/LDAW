@@ -117,7 +117,7 @@ export default class MisJuegos extends Component {
                   <td>{game.title.gameName}</td>
                   <td>{game.title.edition}</td>
                   <td>{game.title.version}</td>
-                  <td>{game.console.name}</td>
+                  <td>{game.console.nombre}</td>
                   <td></td>
                   <td>
                     <Row>

@@ -114,7 +114,7 @@ export default class VerJuegos extends Component {
         <Table dark hover>
             <thead>
               <tr>
-                  <th>Dueño/a</th>
+                  <th>Usuario</th>
                   <th>Consola</th>
                   <th>Condiciones</th>
                   <th>Acción</th>

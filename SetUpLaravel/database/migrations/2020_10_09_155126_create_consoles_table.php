@@ -15,7 +15,7 @@ class CreateConsolesTable extends Migration
     {
         Schema::create('consoles', function (Blueprint $table) {
             $table->id()->from(1);
-            $table->string('console', 30);
+            $table->string('nombre', 30);
         });
     }
 

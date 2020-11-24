@@ -59,6 +59,7 @@ export default class MainViewR extends Component {
             </ul>
           </div>
         </nav>
+        <div className="container">
         <FormGroup>
           <Label>Escribe el nombre de un juego...</Label>
           <InputGroup>
@@ -68,7 +69,7 @@ export default class MainViewR extends Component {
             <Input onChange={this.onInputChange} type="text" className="form-control" placeholder="Animal crossing" aria-label="buscarTitulo" aria-describedby="buscarTitulo"></Input>
           </InputGroup>
         </FormGroup>
-
+        </div>
         <Card inputValue={this.state.inputValue}
         />
 

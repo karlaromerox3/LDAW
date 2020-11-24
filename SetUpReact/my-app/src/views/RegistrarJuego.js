@@ -35,7 +35,7 @@ function parseTitles(titles) {
 
 function parseConsoles(consoles) {
   return consoles.map((console) => {
-    return { label: console.name, value: console.id };
+    return { label: console.nombre, value: console.id };
   })
 }
 

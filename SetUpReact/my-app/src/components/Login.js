@@ -73,8 +73,8 @@ render() {
       <Form>
       <div class="row justify-content-center">
                         <div class="col-4" >
-        <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Correo Electronico:</Form.Label>
-            <Form.Control type="text" placeholder="Enter email" name="email" value={this.state.email} onChange={this.onChange}/>           
+        <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Correo:</Form.Label>
+            <Form.Control type="text" placeholder="mariaSandoval@gmail.com" name="email" value={this.state.email} onChange={this.onChange}/>           
         </Form.Group>
         </div>
         </div>
@@ -82,7 +82,7 @@ render() {
                         <div class="col-4" >
         <Form.Group controlId="formBasicPassword" style={{ width: '300px' }}>
             <Form.Label>Contraseña:</Form.Label>
-            <Form.Control type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.onChange}/>
+            <Form.Control type="password" placeholder="" name="password" value={this.state.password} onChange={this.onChange}/>
         </Form.Group>
         </div>
         </div>
