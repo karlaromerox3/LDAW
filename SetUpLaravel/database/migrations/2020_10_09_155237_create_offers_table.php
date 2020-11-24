@@ -15,7 +15,7 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id()->from(1);
-            $table->foreignId('userD_id')->constrained('myusers');
+            $table->foreignId('userD_id')->constrained('users');
             $table->string('completeName', 40);
             $table->char('telephone', 10);
             $table->char('cellphone', 10);

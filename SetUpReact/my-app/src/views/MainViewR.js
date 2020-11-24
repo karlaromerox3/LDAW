@@ -106,7 +106,7 @@ export default class MainViewR extends Component {
         <div className="container">
 
         <FormGroup>
-          <Label>Escribe el nombre de un juego...</Label>
+          <Label>Escribe el nombre de un título...</Label>
           <InputGroup>
             <InputGroupAddon addonType="prepend">
               <InputGroupText><FontAwesomeIcon icon={['fas', 'search']} color="#2b2d30" /></InputGroupText>

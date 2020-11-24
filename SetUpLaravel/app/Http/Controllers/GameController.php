@@ -46,7 +46,8 @@ class GameController extends Controller
         $game->console_id = $request -> console_id;
         $game->condition = $request -> condition;
 
-        $game->save();  
+        $game->save();
+        return response()->json('Juego registrado de manera exitosa!');
     }
 
     /**
