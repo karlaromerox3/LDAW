@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 //COMPONENTS
 import {Button, Table, Row, InputGroup, InputGroupAddon, InputGroupText, Input, FormGroup, Label} from 'reactstrap';
-import LogoutButtonG from '../components/LogoutButtonG';
+//import LogoutButtonG from '../components/LogoutButtonG';
 import SimpleTooltip from '../components/SimpleTooltip';
 import Swal from 'sweetalert2';
+import Logout from '../components/Logout';
 
 //STYLES
 import logo from './../resources/logowobg.png';
@@ -75,7 +76,7 @@ export default class MisJuegos extends Component {
             <h1 className="title">MIS JUEGOS</h1>
             <div className="App-header">
               <div fixed="top-right">
-                      <LogoutButtonG />
+                      <Logout />
               </div>
               <br />
             </div>

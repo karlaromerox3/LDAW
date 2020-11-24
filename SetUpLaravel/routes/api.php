@@ -30,12 +30,13 @@ Route::group([
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
     Route::post('me', 'App\Http\Controllers\AuthController@me');
     Route::post('payload', 'App\Http\Controllers\AuthController@payload');
-
+    
 
 });
 
 //Cuentas
 Route::resource('account/register', 'App\Http\Controllers\Auth\RegisterController');
+Route::get('account/user/{email}', 'App\Http\Controllers\Auth\RegisterController@show');
 
 //END CUENTAS
 Route::resource('games', 'App\Http\Controllers\GameController');

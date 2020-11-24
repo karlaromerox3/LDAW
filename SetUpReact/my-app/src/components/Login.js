@@ -16,18 +16,21 @@ constructor(props) {
     this.handleSubmit = this.handleSubmit.bind(this);
 }
 onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
 handleSubmit(event) {
+  
     console.log(this.state.email)
     console.log(this.state.password)
+    localStorage.setItem('email',this.state.email);
+
     event.preventDefault();
     axios.post('http://localhost:8000/api/auth/login', {
       email: this.state.email,
       password: this.state.password,
   }).then(function (res){
-      console.log(res)
+      console.log(res) 
       localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', res.config.data);
-      localStorage.setItem('auth', true);
+     localStorage.setItem('auth', true);
       window.location ="http://localhost:3000/registrado";
   }).catch(function (err){
       console.log(err)
@@ -38,20 +41,29 @@ handleSubmit(event) {
         'error'
         )
   })
+
+ 
  
   event.preventDefault();
 }
+/*
+nombre(){
+  axios.post('http://localhost:8000/api/auth/login', {
+      email: this.state.email,
+  }).then(function (res){
+    localStorage.setItem("name",res.data.name)
+  })
+}*/
 
 render() {
-  if(localStorage.getItem('token')){
-    return <Redirect to='/registrado'/>
-}
+  
   return (
     <div class="content">
-    <div class="container">
+    <div class="container dflex">
         <div class="row">
             <div class="col-12" >
               <br/><br/>
+
             <div class="row justify-content-center">
 
             <img src={logo} className="App-logo" alt="GAMECH logo" />

@@ -6,7 +6,11 @@ import  { Redirect } from 'react-router-dom'
 
 const LogoutButton = () => {
     const logout = () => {
-        localStorage.removeItem("user");
+        localStorage.removeItem("nombre");
+        localStorage.removeItem("email");
+
+        localStorage.removeItem("id");
+
         localStorage.removeItem("token");
         window.location ="http://localhost:3000/";
     };

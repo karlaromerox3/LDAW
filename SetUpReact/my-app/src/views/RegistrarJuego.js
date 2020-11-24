@@ -8,7 +8,8 @@ import { Button, FormGroup, Label, Col, Input, Row, Dropdown, Alert } from "reac
 import  { Redirect } from 'react-router-dom'
 
 import logo from './../resources/logowobg.png';
-import LogoutButtonG from '../components/LogoutButtonG';
+//import LogoutButtonG from '../components/LogoutButtonG';
+import Logout from '../components/Logout';
 
 
 //API calls
@@ -139,7 +140,7 @@ export default class RegistrarJuego extends Component {
             <h1 className="title">REGISTRAR JUEGO</h1>
             <div className="App-header">
               <div fixed="top-right">
-                      <LogoutButtonG />
+                      <Logout />
               </div>
               <br />
             </div>

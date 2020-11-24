@@ -90,4 +90,11 @@ class RegisterController extends Controller
 
         $user->save();
     }
+   
+    public function show($email)
+    {
+        return User::where('email',$email)->get();
+
+    }
+
 }

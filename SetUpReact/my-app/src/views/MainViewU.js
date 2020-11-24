@@ -6,7 +6,7 @@ import {  Button } from "reactstrap";
 import {Label, Input, FormGroup, InputGroupAddon, InputGroup, InputGroupText } from 'reactstrap';
 import logo from '../resources/logowobg.png';
 import ModalRegistrarse from '../components/ModalRegistrarse';
-import LoginButtonG from '../components/LoginButtonG';
+//import LoginButtonG from '../components/LoginButtonG';
 import Card from '../components/Card';
 import ModalIniciaSesion from '../components/ModalIniciaSesion';
 
@@ -48,7 +48,6 @@ export default class MainViewR extends Component {
 <h1 className="title">GAMECH</h1>
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <LoginButtonG />
                 <Link to="/login">
                 <button className="btn btn-outline-primary" >Iniciar Sesión</button>
                 </Link>

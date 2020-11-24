@@ -20,18 +20,19 @@ constructor(props) {
 onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 handleSubmit(event) {
    
-    console.log(this.state.name)
-    console.log(this.state.email)
-    console.log(this.state.password)
+   
     event.preventDefault();
+    if(this.state.email!=='' && this.state.password!=='' && this.state.name!==''){
+
+    
     axios.post('http://localhost:8000/api/account/register', {
         email: this.state.email,
         password: this.state.password,
         name: this.state.name,
     }).then(function (res){
         console.log(res)
-        localStorage.setItem('token', res.data.access);
-        localStorage.setItem('user', res.config.data);
+        //localStorage.setItem('token', res.data.access);
+        //localStorage.setItem('user', res.config.data);
         Swal.fire("¡Listo!", "Su registro ha sido guardo de manera exitosa, porfavor inicie sesion", "success").then(function () {
             window.location = "http://localhost:3000/";
           });
@@ -40,10 +41,18 @@ handleSubmit(event) {
         console.log(err)
         Swal.fire(
             'ERROR',
-            'Datos incompletos',
+            'Error al registrar, esta seguro que no tiene una cuenta con nosotros?',
             'error'
             )
+        
     })
+}else{
+    Swal.fire(
+        'ERROR',
+        'Verifique que todos los campos esten completos',
+        'error'
+        )
+}
     event.preventDefault();
         
         
