@@ -9,6 +9,10 @@ import MainViewR from './views/MainViewR';
 import RegistrarJuego from './views/RegistrarJuego';
 import MisJuegos from './components/MisJuegos';
 import VerJuegos from "./components/VerJuegos";
+import VerMisOfertas from "./components/VerMisOfertas";
+import RegistrarOferta from "./views/RegistrarOferta";
+import ModificarOferta from "./views/ModificarOferta";
+import VerOfertas from "./components/VerOfertas";
 //STYLES
 import './App.css';
 
@@ -28,7 +32,11 @@ function App() {
 
           <Route path="/RegistrarJuego/:id" exact><RegistrarJuego/></Route>
 
+         <Route path="/RegistrarOferta/:idGame/:idUsuario" exact><RegistrarOferta/></Route>
+         <Route path="/MisOfertas/:idUsuario" exact ><VerMisOfertas/> </Route>
          <Route path="/VerJuegos/:id" exact><VerJuegos/></Route> 
+         <Route path="/VerOfertas/:idGame/:idUsuario" exact><VerOfertas/></Route>
+         <Route path="/ModificarOferta/:idOferta/:idUsuario" exact><ModificarOferta/></Route>
 
          <Route path="/MisJuegos/:id" exact><MisJuegos/></Route> 
       </BrowserRouter>

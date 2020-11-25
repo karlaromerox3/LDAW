@@ -62,6 +62,13 @@ class GameController extends Controller
         return $games;
     }
 
+    public function getSpecific($id)
+    {
+        $games = Game::with('console')->with('title')
+        ->where('id', $id)->get();
+        return $games;
+    }
+
     /**
      * Display the specified resource.
      *
@@ -70,10 +77,7 @@ class GameController extends Controller
      */
     public function myGames($id)
     {
-        $games = Game::with('title')
-        ->with('console')
-        ->where('user_id', $id)
-        ->get();
+        $games = Game::getMyGames($id);
         return $games;
     }
 
@@ -98,6 +102,10 @@ class GameController extends Controller
             ->get();
         }
         return $games;
+    }
+
+    public function getUserGames($id){
+        return Game::getUserGames($id);
     }
 
     /**

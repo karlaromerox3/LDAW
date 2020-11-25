@@ -41,7 +41,12 @@ export default class MainViewR extends Component {
         <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+            <Link   to={{
+                        pathname: '../MisOfertas/1',
+                      
+                      }}>
+                      <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+                    </Link>
             <h1 className="title">GAMECH</h1>
             <div className="App-header">
               <div fixed="top-right">

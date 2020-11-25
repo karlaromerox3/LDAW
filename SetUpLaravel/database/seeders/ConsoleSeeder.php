@@ -16,115 +16,115 @@ class ConsoleSeeder extends Seeder
     {
         DB::table('consoles')->insert([
             [
-                'console' => 'PlayStation 2',
+                'name' => 'PlayStation 2',
             ],
             [
-                'console' => 'Nintendo DS',
+                'name' => 'Nintendo DS',
             ],
             [
-                'console' => 'Game Boy',
+                'name' => 'Game Boy',
             ],
             [
-                'console' => 'PlayStation 4',
+                'name' => 'PlayStation 4',
             ],
             [
-                'console' => 'PlayStation',
+                'name' => 'PlayStation',
             ],
             [
-                'console' => 'Wii',
+                'name' => 'Wii',
             ],
             [
-                'console' => 'PlayStation 3',
+                'name' => 'PlayStation 3',
             ],
             [
-                'console' => 'Xbox 360',
+                'name' => 'Xbox 360',
             ],
             [
-                'console' => 'PlayStation Portable',
+                'name' => 'PlayStation Portable',
             ],
             [
-                'console' => 'Game Boy Advance',
+                'name' => 'Game Boy Advance',
             ],
             [
-                'console' => 'Nintendo 3DS',
+                'name' => 'Nintendo 3DS',
             ],
             [
-                'console' => 'Nintendo Switch',
+                'name' => 'Nintendo Switch',
             ],
             [
-                'console' => 'Nintendo NES',
+                'name' => 'Nintendo NES',
             ],
             [
-                'console' => 'Nintendo Switch',
+                'name' => 'Nintendo Switch',
             ],
             [
-                'console' => 'Super Nintendo',
+                'name' => 'Super Nintendo',
             ],
             [
-                'console' => 'Xbox One',
+                'name' => 'Xbox One',
             ],
             [
-                'console' => 'Nintendo 64',
+                'name' => 'Nintendo 64',
             ],
             [
-                'console' => 'Mega Drive',
+                'name' => 'Mega Drive',
             ],
             [
-                'console' => 'Atari 2600',
+                'name' => 'Atari 2600',
             ],
             [
-                'console' => 'Xbox',
+                'name' => 'Xbox',
             ],
             [
-                'console' => 'GameCube',
+                'name' => 'GameCube',
             ],
             [
-                'console' => 'Wii U',
+                'name' => 'Wii U',
             ],
             [
-                'console' => 'Sega Game Gear',
+                'name' => 'Sega Game Gear',
             ],
             [
-                'console' => 'PlayStation Vita',
+                'name' => 'PlayStation Vita',
             ],
             [
-                'console' => 'Master System',
+                'name' => 'Master System',
             ],
             [
-                'console' => 'TurboGrafx 16',
+                'name' => 'TurboGrafx 16',
             ],
             [
-                'console' => 'Sega Saturn',
+                'name' => 'Sega Saturn',
             ],
             [
-                'console' => 'Dreamcast',
+                'name' => 'Dreamcast',
             ],
             [
-                'console' => 'Sega Pico',
+                'name' => 'Sega Pico',
             ],
             [
-                'console' => 'WonderSwan',
+                'name' => 'WonderSwan',
             ],
             [
-                'console' => 'Intellivision',
+                'name' => 'Intellivision',
             ],
             [
-                'console' => 'N-Gage',
+                'name' => 'N-Gage',
             ],
             [
-                'console' => 'ColecoVision',
+                'name' => 'ColecoVision',
             ],
             [
-                'console' => 'Magnavox Odyssey',
+                'name' => 'Magnavox Odyssey',
             ],
             [
-                'console' => 'Atari Lynx',
+                'name' => 'Atari Lynx',
             ],
             [
-                'console' => 'Phillips CD i',
+                'name' => 'Phillips CD i',
             ],
             [
-                'console' => 'Nintendo Virtual Boy',
+                'name' => 'Nintendo Virtual Boy',
             ]
          ]);
     }

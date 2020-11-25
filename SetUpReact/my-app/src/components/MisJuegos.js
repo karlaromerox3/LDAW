@@ -61,7 +61,9 @@ export default class MisJuegos extends Component {
               'ERROR!',
               'No existen registros aún.',
               'error'
-            );
+            ).then(function() {
+              window.location = "http://localhost:3000/registrado";
+          });
           }
           })
       }
@@ -113,15 +115,19 @@ export default class MisJuegos extends Component {
             <>
             <tbody>
                 <tr key={game.id}>
-                  <td>{game.title.gameName}</td>
-                  <td>{game.title.edition}</td>
-                  <td>{game.title.version}</td>
-                  <td>{game.console.name}</td>
-                  <td></td>
+                  <td>{game.gameName}</td>
+                  <td>{game.edition}</td>
+                  <td>{game.version}</td>
+                  <td>{game.name}</td>
+                  <td>{game.total}</td>
                   <td>
-                    <Row>
-                        <Button color="primary">Ver ofertas</Button>
-                    </Row>
+                  <Link   to={{
+                        pathname: '../VerOfertas/'+ game.id + '/1',
+                        state:game.id
+                      
+                      }}>
+                      <Button color="primary" size="sm" id="RegistrarOferta">Ver Ofertas</Button>
+                    </Link>
                   </td>
                 </tr>
             </tbody>

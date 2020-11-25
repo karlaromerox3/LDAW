@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import '../styles/modals.css';
 import { Modal } from 'react-bootstrap';
+import { Button, FormGroup, Label, Col, Input, Row, Dropdown, Alert } from "reactstrap";
 
 /*
   Este componente recibe:
@@ -11,8 +12,8 @@ import { Modal } from 'react-bootstrap';
 */
 
 class ModalVerDatos extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       show: false
     }
@@ -26,7 +27,7 @@ class ModalVerDatos extends React.Component {
   render() {
     return (
       <React.StrictMode>
-        <button className="btn btn-outline-primary" onClick={() => { this.handleModal() }}>Ver Datos</button>
+        <Button color="primary" onClick={() => { this.handleModal() }}>Ver Datos</Button>
         <Modal className="modalOferta" show={this.state.show} onHide={() => this.handleModal()} centered>
           {/*<Modal.Header closeButton>
             <h6 className="modal-title">Registrar Oferta</h6>
@@ -36,14 +37,14 @@ class ModalVerDatos extends React.Component {
               <div class="col-12">
                 <center><h3>Datos de contacto</h3></center> <br/>
                 <p><strong>Nombre completo: </strong>
-                <p class="bigger-text">{this.props.nombre}</p></p>
+                <p class="bigger-text">{this.props.name}</p></p>
                 <p>
                   <strong>Celular/Teléfono: </strong> <br/>
-                  <p class="bigger-text">{this.props.cel}</p>
+                  <p class="bigger-text">{this.props.phone}</p>
                 </p>
                 <p>
                   <strong>Correo: </strong> <br/>
-                  <p class="bigger-text">{this.props.correo}</p>
+                  <p class="bigger-text">{this.props.email}</p>
                 </p>
               </div>
             </div>
