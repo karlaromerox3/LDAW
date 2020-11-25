@@ -68,11 +68,10 @@ export default class MainViewR extends Component {
           <div className="container-fluid" >
           
             <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
-            <h1 className="title">GAMECH</h1><br/>
+           
 
             <Link   to={{
-                        pathname: '../MisOfertas/1',
+                        pathname: `../MisOfertas/${localStorage.getItem("id")}`,
                       
                       }}>
                       <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>

@@ -14,6 +14,10 @@ import VerJuegos from "./components/VerJuegos";
 import RegistrarJuego from './views/RegistrarJuego';
 import PrivateRouter from './PrivateRouter';
 import PublicRouter from './PublicRouter';
+import VerMisOfertas from "./components/VerMisOfertas";
+import RegistrarOferta from "./views/RegistrarOferta";
+import ModificarOferta from "./views/ModificarOferta";
+import VerOfertas from "./components/VerOfertas";
 
 function App() {
   return (
@@ -26,9 +30,13 @@ function App() {
         <Route path="/registrado" component={MainViewR} />
         <Route path="/RegistrarJuego/:id" exact><RegistrarJuego/></Route>
         <PrivateRouter path="/registrado" component={MainViewR}/>  
-<Route path="/VerJuegos/:id" exact><VerJuegos/></Route> 
+        <Route path="/VerJuegos/:id" exact><VerJuegos/></Route> 
 
-<Route path="/MisJuegos/:id" exact><MisJuegos/></Route> 
+        <Route path="/MisJuegos/:id" exact><MisJuegos/></Route> 
+        <Route path="/RegistrarOferta/:idGame/:idUsuario" exact><RegistrarOferta/></Route>
+         <Route path="/MisOfertas/:idUsuario" exact ><VerMisOfertas/> </Route> 
+         <Route path="/VerOfertas/:idGame/:idUsuario" exact><VerOfertas/></Route>
+         <Route path="/ModificarOferta/:idOferta/:idUsuario" exact><ModificarOferta/></Route>
       </Switch>
     </Router>
   );

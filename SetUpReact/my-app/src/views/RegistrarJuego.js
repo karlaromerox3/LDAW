@@ -57,6 +57,7 @@ export default class RegistrarJuego extends Component {
       consoles: [],
       titles: [],
       condition: null,
+      urlElements: window.location.href.split('/'),
       errors: {
         condition: '',
       }
@@ -152,7 +153,7 @@ export default class RegistrarJuego extends Component {
         <Alert color="primary">Todos los campos son obligatorios.</Alert>
         <br></br>
         <Form onSubmit={this.onSubmit} autoComplete="off">
-            <Input type="text" id="user_id" value="1" hidden></Input>
+            <Input type="text" id="user_id" value={this.state.urlElements[4]} hidden></Input>
 
             <FormGroup>
               <Label>Título:</Label>

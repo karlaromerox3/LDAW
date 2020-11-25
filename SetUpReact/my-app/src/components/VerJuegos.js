@@ -132,11 +132,11 @@ export default class VerJuegos extends Component {
             <tbody>
                 <tr key={game.id}>
                   <td>{game.user_id}</td>
-                  <td>{game.console.name}</td>
+                  <td>{game.console.nombre}</td>
                   <td>{game.condition}</td>
                   <td>
                   <Link   to={{
-                        pathname: '../RegistrarOferta/'+ game.id + '/1',
+                        pathname: '../RegistrarOferta/'+ game.id + `/${localStorage.getItem("id")}`,
                         state:game.id
                       
                       }}>

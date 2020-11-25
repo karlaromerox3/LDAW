@@ -16,115 +16,115 @@ class ConsoleSeeder extends Seeder
     {
         DB::table('consoles')->insert([
             [
-                'name' => 'PlayStation 2',
+                'nombre' => 'PlayStation 2',
             ],
             [
-                'name' => 'Nintendo DS',
+                'nombre' => 'Nintendo DS',
             ],
             [
-                'name' => 'Game Boy',
+                'nombre' => 'Game Boy',
             ],
             [
-                'name' => 'PlayStation 4',
+                'nombre' => 'PlayStation 4',
             ],
             [
-                'name' => 'PlayStation',
+                'nombre' => 'PlayStation',
             ],
             [
-                'name' => 'Wii',
+                'nombre' => 'Wii',
             ],
             [
-                'name' => 'PlayStation 3',
+                'nombre' => 'PlayStation 3',
             ],
             [
-                'name' => 'Xbox 360',
+                'nombre' => 'Xbox 360',
             ],
             [
-                'name' => 'PlayStation Portable',
+                'nombre' => 'PlayStation Portable',
             ],
             [
-                'name' => 'Game Boy Advance',
+                'nombre' => 'Game Boy Advance',
             ],
             [
-                'name' => 'Nintendo 3DS',
+                'nombre' => 'Nintendo 3DS',
             ],
             [
-                'name' => 'Nintendo Switch',
+                'nombre' => 'Nintendo Switch',
             ],
             [
-                'name' => 'Nintendo NES',
+                'nombre' => 'Nintendo NES',
             ],
             [
-                'name' => 'Nintendo Switch',
+                'nombre' => 'Nintendo Switch',
             ],
             [
-                'name' => 'Super Nintendo',
+                'nombre' => 'Super Nintendo',
             ],
             [
-                'name' => 'Xbox One',
+                'nombre' => 'Xbox One',
             ],
             [
-                'name' => 'Nintendo 64',
+                'nombre' => 'Nintendo 64',
             ],
             [
-                'name' => 'Mega Drive',
+                'nombre' => 'Mega Drive',
             ],
             [
-                'name' => 'Atari 2600',
+                'nombre' => 'Atari 2600',
             ],
             [
-                'name' => 'Xbox',
+                'nombre' => 'Xbox',
             ],
             [
-                'name' => 'GameCube',
+                'nombre' => 'GameCube',
             ],
             [
-                'name' => 'Wii U',
+                'nombre' => 'Wii U',
             ],
             [
-                'name' => 'Sega Game Gear',
+                'nombre' => 'Sega Game Gear',
             ],
             [
-                'name' => 'PlayStation Vita',
+                'nombre' => 'PlayStation Vita',
             ],
             [
-                'name' => 'Master System',
+                'nombre' => 'Master System',
             ],
             [
-                'name' => 'TurboGrafx 16',
+                'nombre' => 'TurboGrafx 16',
             ],
             [
-                'name' => 'Sega Saturn',
+                'nombre' => 'Sega Saturn',
             ],
             [
-                'name' => 'Dreamcast',
+                'nombre' => 'Dreamcast',
             ],
             [
-                'name' => 'Sega Pico',
+                'nombre' => 'Sega Pico',
             ],
             [
-                'name' => 'WonderSwan',
+                'nombre' => 'WonderSwan',
             ],
             [
-                'name' => 'Intellivision',
+                'nombre' => 'Intellivision',
             ],
             [
-                'name' => 'N-Gage',
+                'nombre' => 'N-Gage',
             ],
             [
-                'name' => 'ColecoVision',
+                'nombre' => 'ColecoVision',
             ],
             [
-                'name' => 'Magnavox Odyssey',
+                'nombre' => 'Magnavox Odyssey',
             ],
             [
-                'name' => 'Atari Lynx',
+                'nombre' => 'Atari Lynx',
             ],
             [
-                'name' => 'Phillips CD i',
+                'nombre' => 'Phillips CD i',
             ],
             [
-                'name' => 'Nintendo Virtual Boy',
+                'nombre' => 'Nintendo Virtual Boy',
             ]
          ]);
     }

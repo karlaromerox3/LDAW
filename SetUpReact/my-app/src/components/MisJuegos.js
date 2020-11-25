@@ -57,15 +57,15 @@ export default class MisJuegos extends Component {
             console.log(games);
             this.setState({ games });
             let empty = this.state.games.length;
-          if(empty === 0){
-            Swal.fire(
-              'ERROR!',
-              'No existen registros aún.',
-              'error'
-            ).then(function() {
-              window.location = "http://localhost:3000/registrado";
-          });
-          }
+            if(empty === 0){
+              Swal.fire(
+                'ERROR!',
+                'No existen registros aún.',
+                'error'
+              ).then(function() {
+                window.location = "http://localhost:3000/registrado";
+              });
+            }
           })
       }
 
@@ -119,7 +119,7 @@ export default class MisJuegos extends Component {
                   <td>{game.gameName}</td>
                   <td>{game.edition}</td>
                   <td>{game.version}</td>
-                  <td>{game.name}</td>
+                  <td>{game.nombre}</td>
                   <td>{game.total}</td>
                   <td>
                   <Link   to={{
