@@ -24,5 +24,10 @@ class Game extends Model
     public function title(){
         return $this->belongsTo('App\Models\Title', 'title_id');
     }
+
+    //Get user of game
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
 }
 
