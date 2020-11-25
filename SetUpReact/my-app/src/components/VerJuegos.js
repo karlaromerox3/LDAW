@@ -131,7 +131,7 @@ export default class VerJuegos extends Component {
             <>
             <tbody>
                 <tr key={game.id}>
-                  <td>{game.user_id}</td>
+                  <td>{game.user.name}</td>
                   <td>{game.console.nombre}</td>
                   <td>{game.condition}</td>
                   <td>
