@@ -72,7 +72,14 @@ export default class VerJuegos extends Component {
                 <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+            <Link   to={{
+                        pathname: '../MisOfertas/1',
+                      
+                      }}>
+                      <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+                      
+                    </Link>
+            
             <h1 className="title">GAMECH</h1>
             <div className="App-header">
             <div fixed="top-right">
@@ -128,9 +135,15 @@ export default class VerJuegos extends Component {
                   <td>{game.console.name}</td>
                   <td>{game.condition}</td>
                   <td>
-                    <Row>
-                        <Button color="primary">Registrar oferta</Button>
-                    </Row>
+                  <Link   to={{
+                        pathname: '../RegistrarOferta/'+ game.id + '/1',
+                        state:game.id
+                      
+                      }}>
+                      <Button color="primary" size="sm" id="RegistrarOferta">Registrar oferta</Button>
+                      <SimpleTooltip placement="top" target="RegistrarOferta">Registrar oferta</SimpleTooltip>
+                    </Link>
+                    
                   </td>
                 </tr>
             </tbody>

@@ -18,7 +18,6 @@ class CreateOffersTable extends Migration
             $table->foreignId('userD_id')->constrained('users');
             $table->string('completeName', 40);
             $table->char('telephone', 10);
-            $table->char('cellphone', 10);
             $table->string('mail', 20);
             $table->foreignId('gameD_id')->constrained('games');
             $table->foreignId('gameR_id')->constrained('games');

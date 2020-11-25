@@ -71,6 +71,13 @@ export default class MainViewR extends Component {
             <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
             <h1 className="title">GAMECH</h1><br/>
 
+            <Link   to={{
+                        pathname: '../MisOfertas/1',
+                      
+                      }}>
+                      <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+                    </Link>
+            <h1 className="title">GAMECH</h1>
             <div className="App-header">
               <div fixed="top-right">
               <div id="saludo"></div>

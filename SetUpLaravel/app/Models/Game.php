@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Game extends Model
 {
@@ -24,5 +25,29 @@ class Game extends Model
     public function title(){
         return $this->belongsTo('App\Models\Title', 'title_id');
     }
+
+    public static function getMyGames($id){
+        $registers = DB::table('games')->select("games.id", "games.user_id", "console_id", "condition", "titles.gameName", "titles.edition", "titles.version", 'consoles.name', DB::raw('COUNT(offers.id) as total'))
+        ->leftJoin('offers', 'games.id', 'offers.gameR_id')
+        ->join('consoles', 'games.console_id', 'consoles.id')
+        ->join('titles', 'games.title_id', 'titles.id')
+        ->groupBy('games.id','games.user_id',"console_id",'condition',"titles.gameName", "titles.edition", "titles.version", 'consoles.name')
+        ->where('user_id', $id)
+        ->get();
+        return $registers;
+    
+    }
+
+    public static function getUserGames($id){
+        $registers = DB::table('games')
+      ->select("games.id as game_id", "games.user_id as id_user", "titles.id as title_id", "titles.gameName as gameName", "titles.edition as edition", "titles.version as version", "consoles.id as console_id", "consoles.name as consoleName" )
+      ->join("titles", "games.title_id", "titles.id")
+      ->join("consoles", "games.console_id", "consoles.id")
+      ->where('user_id', $id)
+      ->get();
+
+    return $registers;
+    }
+    
 }
 
