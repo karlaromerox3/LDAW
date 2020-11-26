@@ -26,6 +26,21 @@ class Game extends Model
         return $this->belongsTo('App\Models\Title', 'title_id');
     }
 
+    public static function getGames($id){
+        $registers = DB::table('games')
+      ->select("games.id as game_id", "games.user_id as id_user", "titles.id as title_id", "titles.gameName as gameName", "games.condition as condition", "titles.edition as edition", "titles.version as version", "consoles.id as console_id", "consoles.nombre as consoleName", "users.name as uname" )
+      ->join("titles", "games.title_id", "titles.id")
+      ->join("consoles", "games.console_id", "consoles.id")
+      ->join("users", "games.user_id", "users.id")
+      ->where('title_id', $id)
+      ->get();
+
+    return $registers;
+    }
+
+
+    
+
     public static function getMyGames($id){
         $registers = DB::table('games')->select("games.id", "games.user_id", "console_id", "condition", "titles.gameName", "titles.edition", "titles.version", 'consoles.nombre', DB::raw('COUNT(offers.id) as total'))
         ->leftJoin('offers', 'games.id', 'offers.gameR_id')

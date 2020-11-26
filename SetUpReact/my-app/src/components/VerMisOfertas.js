@@ -55,26 +55,7 @@ export default class VerMisOfertas extends Component {
           })
       }
 
-      getTitle(){
-        let urlElements = window.location.href.split('/');
-        axios.get(API_BASE_URL + 'titles/' + urlElements[4] )
-          .then(res => {
-            const titles = res.data;
-            console.log(titles);
-            this.setState({ titles });
-            let empty = this.state.titles.length;
-          if(empty === 0){
-            Swal.fire(
-              'ERROR!',
-              'No existen registros aún.',
-              'error'
-            ).then(function() {
-              window.location = "http://localhost:3000/registrado";
-          });
-          }
-          
-          })
-      }
+      
     render() {
         return (
             <div>
