@@ -106,7 +106,7 @@ class ModalMisOfertas extends React.Component {
                 </p>
                 <p>
                   <strong>Consola: </strong>
-                  {gameR.console.name}
+                  {gameR.console.nombre}
                 </p>
                 <p>
                   <strong>Condiciones: </strong> <br/>
@@ -129,7 +129,7 @@ class ModalMisOfertas extends React.Component {
                 </p>
                 <p>
                   <strong>Consola: </strong>
-                  {gameD.console.name}
+                  {gameD.console.nombre}
                 </p>
                 <p>
                   <strong>Condiciones: </strong> <br/>

@@ -35,4 +35,28 @@ class Offer extends Model
         return $registers;
     }
 
+    public static function getOfferForGame($id){
+        $registers =  DB::table('offers')
+        ->select('offers.*', 'titles.gameName')
+        ->join('games', 'offers.gameD_id', 'games.id')
+        ->join('titles', 'games.title_id', 'titles.id')
+        ->where('gameR_id', $id)
+        ->get();
+
+        return $registers;
+    }
+
+    public static function getOffers($id){
+        $registers =  DB::table('offers')
+        ->select('offers.*', 'titlesD.gameName as gameNameD', 'titlesR.gameName as gameNameR')
+        ->join('games as gameD', 'offers.gameD_id', 'gameD.id')
+        ->join('games as gameR', 'offers.gameR_id', 'gameR.id')
+        ->join('titles as titlesR', 'gameR.title_id', 'titlesR.id')
+        ->join('titles as titlesD', 'gameD.title_id', 'titlesD.id')
+        ->where('userD_id', $id)
+        ->get();
+
+        return $registers;
+    }
+
 }

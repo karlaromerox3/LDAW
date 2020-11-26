@@ -65,7 +65,7 @@ export default class VerOfertas extends Component {
           <div className="container-fluid">
             <img src={logo} className="App-logo" alt="GAMECH logo" />
             
-            <h1 className="title"></h1>
+            <h1 className="title">Ver Ofertas</h1>
             <div className="App-header">
             <div fixed="top-right">
                 <Row>
@@ -111,7 +111,7 @@ export default class VerOfertas extends Component {
             <>
             <tbody>
                 <tr key={offer.id}>
-                  <td>{offer.gameD_id}</td>
+                  <td>{offer.gameName}</td>
                   <td>{offer.completeName}</td>
                  
                   <td>

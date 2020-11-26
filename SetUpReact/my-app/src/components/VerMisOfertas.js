@@ -110,8 +110,8 @@ export default class VerMisOfertas extends Component {
             <>
             <tbody>
                 <tr key={offer.id}>
-                  <td>{offer.gameR_id}</td>
-                  <td>{offer.gameD_id}</td>
+                  <td>{offer.gameNameR}</td>
+                  <td>{offer.gameNameD}</td>
                   <td><span className='error badge badge-warning'><h6 style={{color: 'black'}}>{offer.status}</h6></span></td>
                   <td>
                       <ModalMisOfertas offerId = {offer.id} gameR_id= {offer.gameR_id} gameD_id= {offer.gameD_id}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

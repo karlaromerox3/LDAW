@@ -9,10 +9,7 @@ class OfferController extends Controller
 {
     public function getOffers($id){
       
-      $response = Offer::with('gameD')
-        ->with('gameR')
-        ->where('userD_id', $id)
-        ->get();
+      $response = Offer::getOffers($id);
       return $response;
     }
 
@@ -53,9 +50,7 @@ class OfferController extends Controller
     }
 
     public function getOffersForGame($id){
-      $response = Offer::with('gameD')
-        ->where('gameR_id', $id)
-        ->get();
+      $response = Offer::getOfferForGame($id);
       return $response;
     }
 }
