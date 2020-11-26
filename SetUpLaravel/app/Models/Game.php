@@ -64,5 +64,9 @@ class Game extends Model
     return $registers;
     }
     
+    //Get user of game
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
 }
 

@@ -58,7 +58,10 @@ class GameController extends Controller
      */
     public function show($id)
     {
-        $games = Game::getGames($id);
+        $games = Game::with('console')
+        ->with('user')
+        ->where('title_id', $id)
+        ->get();
         return $games;
     }
 
