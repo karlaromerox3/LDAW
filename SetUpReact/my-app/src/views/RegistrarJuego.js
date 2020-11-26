@@ -133,8 +133,7 @@ export default class RegistrarJuego extends Component {
   }
     const { errors } = this.state;
     return (
-      <>
-
+<>
       <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <img src={logo} className="App-logo" alt="GAMECH logo" />

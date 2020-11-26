@@ -58,8 +58,10 @@ nombre(){
 render() {
   
   return (
+
     <div class="content">
     <div class="container dflex">
+
         <div class="row">
             <div class="col-12" >
               <br/><br/>
@@ -88,19 +90,23 @@ render() {
         </div>
         <div class="row justify-content-center">
 
-        <div class="col-4" align="center">
 
   <Row>
+  <div class="col-4" align="center">
+
     <Col><Link to="/">
                 <Button >Regresar</Button>
-                </Link> </Col>
+                </Link> </Col></div>
+                <div class="col-8" align="center">
+
         <Col>
+      
         <Button variant="primary" type="submit" onClick={this.handleSubmit}>
         Iniciar Sesión
         </Button>
         </Col>
+        </div>
   </Row>
-  </div>
   </div>
          
 
