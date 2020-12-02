@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
-import {Navbar,FormControl,Nav,NavDropdown} from "react-bootstrap";
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 //Components
 import {
@@ -47,39 +47,33 @@ export default class MainViewR extends Component {
       <div class="content">
 
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Navbar.Brand href="#home">GAMECH</Navbar.Brand>
+  
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mr-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
+    
     <Nav>
     <Link to="/login">
-      <Nav.Link >Iniciar Sesión</Nav.Link>
+    <button className="btn btn-outline-primary">
+                          Iniciar Sesión
+                        </button>
       </Link>
+      &nbsp;
       <Link to="/register">
-      <Nav.Link eventKey={2} >
-        Registrarse
-      </Nav.Link>
+      <button className="btn btn-outline-primary">
+                          Registrarse
+                        </button>
+
       </Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
 <div class="container-fluid">
                   <div class="row justify-content-center">
-                    <img src={logo} className="App-logo" alt="GAMECH logo" />
-                  </div>
-                  <div class="container">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
                     <h1 className="title">GAMECH</h1>
                   </div>
+                 
 
 </div>
 <div className="container">

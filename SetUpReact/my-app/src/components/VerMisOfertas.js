@@ -6,6 +6,8 @@ import {Button, Table, Row, Badge} from 'reactstrap';
 import LogoutButtonG from '../components/LogoutButtonG';
 import SimpleTooltip from '../components/SimpleTooltip';
 import Swal from 'sweetalert2';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
+import Logout from '../components/Logout';
 
 import ModalMisOfertas from "../components/ModalMisOfertas";
 
@@ -58,18 +60,18 @@ export default class VerMisOfertas extends Component {
       
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            
-            <h1 className="title">Mis Ofertas</h1>
-            <div className="App-header">
-            <div fixed="top-right">
-                <Row>
-                      <LogoutButtonG />
-                </Row>
-                &nbsp;&nbsp;&nbsp;
+            <div class="container-fluid">
+              <div>
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    
+    <Nav fixed="top">
+                      <Logout />
+    </Nav>
+    &nbsp;
+    &nbsp;&nbsp;&nbsp;
                 <Row>
                     {/*<Link to={{
                             pathname: '../MisJuegos/' + id,
@@ -85,11 +87,21 @@ export default class VerMisOfertas extends Component {
                         <Button color="primary" id="registrar">Registrar juego</Button>
                     </Link>
                   </Row>
-              </div>
               <br />
-            </div>
-          </div>
-        </nav>
+          
+
+  </Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">Mis Ofertas</h1>
+                  </div>
+                 
+
+</div>
+                
         <div className="container">
         
             <div style={{
@@ -137,6 +149,7 @@ export default class VerMisOfertas extends Component {
         </Link>
         </div>
         </div>
+            </div>
             </div>
         )
     }

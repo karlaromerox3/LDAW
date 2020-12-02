@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { Button, FormGroup, Label, Col, Input, Row, Dropdown, Alert } from "reactstrap";
 import  { Redirect } from 'react-router-dom'
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 import logo from './../resources/logowobg.png';
 //import LogoutButtonG from '../components/LogoutButtonG';
@@ -133,19 +134,26 @@ export default class RegistrarJuego extends Component {
   }
     const { errors } = this.state;
     return (
-<>
-      <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <h1 className="title">REGISTRAR JUEGO</h1>
-            <div className="App-header">
-              <div fixed="top-right">
+<div>
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    
+    <Nav fixed="top">
                       <Logout />
-              </div>
-              <br />
-            </div>
-          </div>
-        </nav> 
+    </Nav>
+  </Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">Registrar Juego</h1>
+                  </div>
+                 
+
+</div>
       <br></br><br></br>
       <div className="container">
       &nbsp;&nbsp;&nbsp;
@@ -186,7 +194,7 @@ export default class RegistrarJuego extends Component {
               </Col>
             </Row>
 
-            <div class="fixed-bottom"  style={{margin: '15px'}}>
+            <div  style={{margin: '15px'}}>
               <Link to='/registrado'>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <Button color="primary" id="regresar"><FontAwesomeIcon icon={['fas', 'arrow-circle-left']}/>&nbsp;Regresar</Button>
@@ -194,7 +202,7 @@ export default class RegistrarJuego extends Component {
             </div>
           </Form>
       </div>
-      </>
+      </div>
     )
   }
 }

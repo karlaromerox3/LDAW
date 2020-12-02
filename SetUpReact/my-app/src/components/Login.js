@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link, Redirect } from "react-router-dom";
 import Swal from 'sweetalert2';
 import logo from '../resources/logowobg.png';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 export default class Login extends Component {
 constructor(props) {
@@ -68,25 +69,21 @@ render() {
 
             <div class="row justify-content-center">
 
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
+            <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
             </div>
             <br/>
             <h1 className="title">GAMECH</h1>
       <Form>
-      <div class="row justify-content-center">
-                        <div class="col-4" >
+      <div class="form-group">
         <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Correo:</Form.Label>
             <Form.Control type="text" placeholder="mariaSandoval@gmail.com" name="email" value={this.state.email} onChange={this.onChange}/>           
         </Form.Group>
         </div>
-        </div>
-        <div class="row justify-content-center">
-                        <div class="col-4" >
+        <div class="form-group">
         <Form.Group controlId="formBasicPassword" style={{ width: '300px' }}>
             <Form.Label>Contraseña:</Form.Label>
-            <Form.Control type="password" placeholder="" name="password" value={this.state.password} onChange={this.onChange}/>
+            <Form.Control  type="password" placeholder="" name="password" value={this.state.password} onChange={this.onChange}/>
         </Form.Group>
-        </div>
         </div>
         <div class="row justify-content-center">
 

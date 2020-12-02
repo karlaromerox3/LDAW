@@ -7,6 +7,7 @@ import {Button, Table, Row, InputGroup, InputGroupAddon, InputGroupText, Input, 
 import SimpleTooltip from '../components/SimpleTooltip';
 import Swal from 'sweetalert2';
 import Logout from '../components/Logout';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 //STYLES
 import logo from './../resources/logowobg.png';
@@ -71,19 +72,28 @@ export default class MisJuegos extends Component {
 
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <h1 className="title">MIS JUEGOS</h1>
-            <div className="App-header">
-              <div fixed="top-right">
+           <div>
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    
+    <Nav fixed="top">
                       <Logout />
-              </div>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">Mis Juegos</h1>
+                  </div>
+                 
+
+</div>
               <br />
-            </div>
-          </div>
-        </nav>
+           
         <div className="container">
         <FormGroup>
           <Label>Escribe el nombre de un juego...</Label>
@@ -136,9 +146,10 @@ export default class MisJuegos extends Component {
         ))}
         </Table>
         </div>
-        <div class="fixed-bottom"  style={{margin: '15px'}}>
+        <div class="fixed-bottom"  style={{margin: '1px'}}>
         <Link to='../registrado'>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
             <Button color="primary" id="regresar"><FontAwesomeIcon icon={['fas', 'arrow-left']}/>&nbsp;Regresar</Button>
         </Link>
         </div>

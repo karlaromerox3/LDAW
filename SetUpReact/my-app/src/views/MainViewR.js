@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import  { Redirect } from 'react-router-dom'
 import axios from 'axios';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 //STYLES
 import './../App.css';
@@ -63,49 +64,56 @@ export default class MainViewR extends Component {
 
    
     return (
-      <div>
-        <nav className="navbar navbar-inverse">
-          <div className="container-fluid" >
-          
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-           
+      <div class="container-fluid">
+          <div>
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="ml-auto">
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+   
+  <Nav pullRight>
 
-            <Link   to={{
-                        pathname: `../MisOfertas/${localStorage.getItem("id")}`,
-                      
-                      }}>
-                      <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
-                    </Link>
-            <h1 className="title">GAMECH</h1>
-            <div className="App-header">
-              <div fixed="top-right">
-              <div id="saludo"></div>
 
-                <Row>
-                  
-
-                      <Logout/>
-                </Row>
-               
-                &nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
                 <Row>
                     {/*<Link to={{
                             pathname: '../MisJuegos/' + id,
                             state: id
                         }}>*/}
-                       <Link to={`../MisJuegos/${localStorage.getItem("id")}`}> 
+                        <Link   to={{
+                        pathname: `../MisOfertas/${localStorage.getItem("id")}`,
+                      
+                      }}>
+                      <Button color="primary" data-toggle="modal" data-target="#misOfertas">Mis Ofertas</Button>
+                    </Link>
+                    <br/>
+                    &nbsp;&nbsp;&nbsp;
+                    <Link to={`../MisJuegos/${localStorage.getItem("id")}`}> 
                       <Button color="primary">Mis Juegos</Button>
                       </Link>
                     &nbsp;&nbsp;&nbsp;
                     <Link to={`../RegistrarJuego/${localStorage.getItem("id")}`}>
                         <Button color="primary" id="registrar">Registrar juego</Button>
                     </Link>
+                    &nbsp;&nbsp;&nbsp;
+                    <Logout />
+
                   </Row>
-              </div>
               <br />
-            </div>
-          </div>
-        </nav>
+          
+</Nav>
+  </Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">GAMECH</h1>
+                  </div>
+                 
+
+</div>
+        
        <div class="row justify-content-center">
                       <h5>Hola, {localStorage.getItem("name")}</h5>
        </div>
@@ -127,7 +135,7 @@ export default class MainViewR extends Component {
 
          
       </div>
-      
+      </div>
   
 
 
