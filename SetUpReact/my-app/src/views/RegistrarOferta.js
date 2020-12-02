@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import { Button, FormGroup, Label, Col, Input, Row, Dropdown, Alert } from "reactstrap";
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 import logo from './../resources/logowobg.png';
 import LogoutButtonG from '../components/LogoutButtonG';
@@ -148,21 +149,26 @@ export default class RegistrarOferta extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <>
+      <div>
 
-      <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <h1 className="title">REGISTRAR OFERTA</h1>
-            <div className="App-header">
-              <div fixed="top-right">
-              <Logout/>
-              </div>
-              <br />
-            </div>
-          </div>
-        </nav> 
-      <br></br><br></br>
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    
+    <Nav fixed="top">
+                      <Logout />
+    </Nav>
+  </Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">Registrar Juego</h1>
+                  </div>
+               
+      <br></br>
       <div className="container">
       &nbsp;&nbsp;&nbsp;
         <Alert color="primary">Todos los campos son obligatorios.</Alert>
@@ -216,14 +222,14 @@ export default class RegistrarOferta extends Component {
             </Row>
 
             <div class="fixed-bottom"  style={{margin: '15px'}}>
-              <Link to='/registrado'>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <Link to='/registrado'>  
               <Button color="primary" id="regresar"><FontAwesomeIcon icon={['fas', 'arrow-circle-left']}/>&nbsp;Regresar</Button>
               </Link>
             </div>
           </Form>
       </div>
-      </>
+      </div>
+      </div>
     )
   }
 }

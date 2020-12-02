@@ -4,6 +4,7 @@ import logo from '../resources/logowobg.png';
 import { Form, Button,  Col,Row } from 'react-bootstrap'
 import { Link, Redirect } from "react-router-dom";
 import Swal from 'sweetalert2';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
 
 export default class Register extends Component {
 constructor(props) {
@@ -63,45 +64,39 @@ handleSubmit(event) {
 
 render() {
     return (
-        <div class="content">
-        <div class="container">
+        
+        <div class="container justify-content-center">
             <div class="row">
                 <div class="col-12" >
                   <br/><br/>
                 <div class="row justify-content-center">
     
-                <img src={logo} className="App-logo" alt="GAMECH logo" />
-                </div>
+                <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
                 <br/>
                 <h1 className="title">GAMECH</h1>
+                </div>
+                <br/>
+                <div class="row justify-content-center">
+
           <Form>
-          <div class="row justify-content-center">
-                        <div class="col-4" >
 <Form.Group controlId="formBasicFirstName" style={{ width: '300px' }}>
               <Form.Label>Nombre:</Form.Label>
               <Form.Control type="text" placeholder="Maria Sandoval" name="name" value={this.state.name} onChange={this.onChange}/>
             </Form.Group>
-            </div>
-            </div>
-            <div class="row justify-content-center">
-                        <div class="col-4" >
+            
+           
 <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>
               <Form.Label>Correo:</Form.Label>
               <Form.Control type="text" placeholder="mariaSandoval@gmail.com" name="email" value={this.state.email} onChange={this.onChange}/>
             </Form.Group>
-            </div>
-            </div>
-            <div class="row justify-content-center">
-                        <div class="col-4" >
+           
+          
 <Form.Group controlId="formBasicPassword" style={{ width: '300px' }}>
               <Form.Label>Contraseña:</Form.Label>
               <Form.Control type="password" placeholder="" name="password" value={this.state.password} onChange={this.onChange}/>
             </Form.Group>
-            </div>
-            </div>
-            <div class="row justify-content-center">
+           
 
-<div class="col-4" align="center">
 
 <Row>
 <Col><Link to="/">
@@ -113,8 +108,8 @@ Registrar
             </Button>
             </Col>
   </Row>
-  </div>
-  </div>
+
+
             
 </Form>
 </div>

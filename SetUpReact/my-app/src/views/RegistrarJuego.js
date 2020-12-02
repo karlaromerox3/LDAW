@@ -196,7 +196,7 @@ export default class RegistrarJuego extends Component {
 
             <div  style={{margin: '15px'}}>
               <Link to='/registrado'>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
               <Button color="primary" id="regresar"><FontAwesomeIcon icon={['fas', 'arrow-circle-left']}/>&nbsp;Regresar</Button>
               </Link>
             </div>

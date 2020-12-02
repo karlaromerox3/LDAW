@@ -60,41 +60,46 @@ render() {
   
   return (
 
-    <div class="content">
-    <div class="container dflex">
+    <div class="container justify-content-center">
+   
 
         <div class="row">
             <div class="col-12" >
               <br/><br/>
+              <br/>
+              <br/>
+              
+            
 
             <div class="row justify-content-center">
 
             <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
-            </div>
             <br/>
             <h1 className="title">GAMECH</h1>
+            </div>
+          
+            <br/>
+
+            <div class="row justify-content-center">
+
       <Form>
-      <div class="form-group">
         <Form.Group controlId="formBasicEmail" style={{ width: '300px' }}>. <Form.Label>Correo:</Form.Label>
             <Form.Control type="text" placeholder="mariaSandoval@gmail.com" name="email" value={this.state.email} onChange={this.onChange}/>           
         </Form.Group>
-        </div>
-        <div class="form-group">
         <Form.Group controlId="formBasicPassword" style={{ width: '300px' }}>
             <Form.Label>Contraseña:</Form.Label>
             <Form.Control  type="password" placeholder="" name="password" value={this.state.password} onChange={this.onChange}/>
         </Form.Group>
-        </div>
-        <div class="row justify-content-center">
+        <div class="row ">
 
 
   <Row>
-  <div class="col-4" align="center">
+  <div class="col-4" >
 
     <Col><Link to="/">
                 <Button >Regresar</Button>
                 </Link> </Col></div>
-                <div class="col-8" align="center">
+                <div class="col-8" >
 
         <Col>
       
@@ -116,7 +121,7 @@ render() {
         <br/>
        
       </Form>
-    </div>
+      </div>
     </div>
     </div>
     </div>

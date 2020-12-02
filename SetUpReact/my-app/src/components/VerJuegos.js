@@ -7,6 +7,8 @@ import {Button, Table, Row, Badge} from 'reactstrap';
 import LogoutButtonG from '../components/LogoutButtonG';
 import SimpleTooltip from '../components/SimpleTooltip';
 import Swal from 'sweetalert2';
+import {Navbar,Image,FormControl,Nav,NavDropdown} from "react-bootstrap";
+import Logout from '../components/Logout';
 
 //STYLES
 import logo from './../resources/logowobg.png';
@@ -68,11 +70,23 @@ export default class VerJuegos extends Component {
         return <Redirect to='login'/>
     }
         return (
-            <div>
-                <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
-            <img src={logo} className="App-logo" alt="GAMECH logo" />
-            <Link   to={{
+          <div class="container-fluid">
+<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+
+<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+<Navbar.Collapse id="responsive-navbar-nav">
+
+<Nav fixed="top">
+                  <Logout />
+</Nav>
+&nbsp;
+&nbsp;&nbsp;&nbsp;
+            <Row>
+                {/*<Link to={{
+                        pathname: '../MisJuegos/' + id,
+                        state: id
+                    }}>*/}
+                    <Link   to={{
                         pathname: '../MisOfertas/1',
                       
                       }}>
@@ -80,43 +94,37 @@ export default class VerJuegos extends Component {
                       
                     </Link>
             
-            <h1 className="title">GAMECH</h1>
-            <div className="App-header">
-            <div fixed="top-right">
-                <Row>
-                      <LogoutButtonG />
-                </Row>
                 &nbsp;&nbsp;&nbsp;
-                <Row>
-                    {/*<Link to={{
-                            pathname: '../MisJuegos/' + id,
-                            state: id
-                        }}>*/}
-                       <Link to={{
-                            pathname: '../MisJuegos/1'
-                        }}> 
-                      <Button color="primary">Mis Juegos</Button>
-                    </Link>
-                    &nbsp;&nbsp;&nbsp;
-                    <Link to='../RegistrarJuego/1'>
-                        <Button color="primary" id="registrar">Registrar juego</Button>
-                    </Link>
-                  </Row>
-              </div>
-              <br />
-            </div>
-          </div>
-        </nav>
-        <div className="container">
-        {this.state.titles.map((title) => (
-            <>
+                
+              </Row>
+          <br />
+      
+
+</Navbar.Collapse>
+</Navbar> 
+<div class="container-fluid">
+                  <div class="row justify-content-center">
+                  <Image src={logo} className="App-logo" alt="GAMECH logo" fluid />
+                  
+                    <h1 className="title">Juegos</h1>
+            {/*       {this.state.titles.map((title) => (
+           // <div class="container">
             <Badge  style={{fontSize: '3rem'}}>{title.gameName} :: {title.edition} :: {title.version}</Badge>
-            </>
-        ))}
-            <div style={{
+            </div>
+
+            ))}*/}
+                  </div>
+                 
+
+
+           
+        <div className="container">
+        <div style={{
             maxHeight: '400px',
             overflowY: 'auto'
           }}>
+           
+        
               <br></br><br></br>
         <Table dark hover>
             <thead>
@@ -159,6 +167,7 @@ export default class VerJuegos extends Component {
         </div>
         </div>
             </div>
+</div>
         )
     }
 }
